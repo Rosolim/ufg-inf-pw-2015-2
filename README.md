@@ -15,6 +15,11 @@ inicia o servidor, apenas execute o comando:
     mvn clean verify cargo:run
 
 
+#### Grupo
+* Ygor Escatolim Castor
+* Gerson Nunes Rosolim
+* Denis Hideo Massunaga
+
 #### Tecnologias Configuradas
 
 * [JSF 2.2]
