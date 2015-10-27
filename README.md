@@ -19,6 +19,7 @@ inicia o servidor, apenas execute o comando:
 * Ygor Escatolim Castor
 * Gerson Nunes Rosolim
 * Denis Hideo Massunaga
+* Vinícius Cândido
 
 #### Tecnologias Configuradas
 
