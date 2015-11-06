@@ -237,8 +237,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}<</source>
+                    <target>${java.version}<</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -250,11 +250,11 @@
                         <containerId>tomcat8x</containerId>
                     </container>
                     <configuration>
-                        <!-- <properties>
+                        <properties>
                             <cargo.servlet.port>9080</cargo.servlet.port>
                             <cargo.rmi.port>9205</cargo.rmi.port>
                             <cargo.tomcat.ajp.port>9009</cargo.tomcat.ajp.port>
-                        </properties> -->
+                        </properties>
                     </configuration>
                     <deployables>
                         <deployable>
