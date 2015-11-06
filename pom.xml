@@ -12,7 +12,7 @@
         <jsf.version>2.2.10</jsf.version>
 
         <!-- Java Properties -->
-        <java.version>1.8</java.version>
+        <java.version>1.7</java.version>
 
         <!-- Encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -237,8 +237,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-                    <source>${java.version}<</source>
-                    <target>${java.version}<</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -247,8 +247,8 @@
                 <version>1.4.8</version>
                 <configuration>
                     <container>
-                        <containerId>tomcat8x</containerId>
-                    </container>
+                        <containerId>tomcat7x</containerId>
+                        </container>
                     <configuration>
                         <properties>
                             <cargo.servlet.port>9080</cargo.servlet.port>
