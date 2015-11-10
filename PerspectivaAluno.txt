@@ -1,0 +1,37 @@
+﻿Primeira Fase Projeto PW
+
+
+Perspectiva do aluno
+
+
+Escopo:
+
+
+1. Disciplinas matriculadas
+   1. Nome da disciplina
+   2. Nome do professor
+   3. Local
+   4. Atividades cadastradas
+   5. Notas
+1. Professor da disciplina
+   1. Contato / Enviar e-mail
+   2. Horários disponíveis na Universidade
+1. Alunos matriculados na disciplina
+   1. Listar alunos
+   2. Contato / Enviar e-mail
+1. Histórico de disciplinas
+   1. Listar disciplinas cursadas
+      1. Visualizar notas ao clicar na disciplina
+      2. Visualizar status de cada disciplina
+      3. Enfatizar reprovações
+1. Inscrições em disciplinas
+   1. cadastrar-se em disciplinas disponíveis até 20 créditos
+   2. não ultrapassar o limite máximo de 20 créditos no semestre
+   3. cadastrar somente em disciplinas com menos de 40 alunos
+   4. atender os pré-requisitos de outras disciplinas
+1. Autenticação
+   1. Utilizando usuário e senha
+1. Leitura de dados
+   1. Notas
+   2. Frequência
+   3. Atividades postadas
