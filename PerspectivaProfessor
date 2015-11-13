@@ -1,0 +1,29 @@
+Perspectiva Professor 
+
+-Nome
+-Disciplinas responsáveis/área de atuação
+-Dados para contato
+-Formação acadêmica (ou link para currículo lattes)
+
+Ações do professor:
+ (As seguintes ações devem ser divididas por disciplina lecionada)
+
+1.Avaliações 
+  Lançamento/visualização de notas das provas
+  [tabela de notas: MATRICULA, ALUNO, NOTA]
+
+2.Frequência
+  Lançamento/visualização de frequência dos alunos
+  [Ideia: calendario do tipo moodle: mostra tabela MATRICULA, ALUNO, PRESENTE(boolean)]
+
+3.Tarefas/Atividades
+  CRUD de tarefas/atividades
+	[Campo de texto livre.]
+  Lançamento/visualização de notas de tarefas/atividades
+  [tabela de notas: MATRICULA, ALUNO, NOTA]
+
+4.Alunos
+  Visualizar alunos cadastrados na disciplina e respectivos perfis ao clicar no nome ou na matricula
+  [Visualizar também o número de faltas e a média]
+	
+	
