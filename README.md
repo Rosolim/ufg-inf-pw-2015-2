@@ -1,6 +1,9 @@
 Projeto de Programação Web - UFG 2015/2
 ========
 
+NOME DO PROJETO: Simple School Admin
+
+
 #### O que é isso?
 
 É a base do projeto de programação web, como base para o projeto eu utilizei um arquétipo base criado por mim
