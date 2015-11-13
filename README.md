@@ -16,10 +16,10 @@ inicia o servidor, apenas execute o comando:
 
 
 #### Grupo
-* Ygor Escatolim Castor
-* Gerson Nunes Rosolim
 * Denis Hideo Massunaga
+* Gerson Nunes Rosolim
 * Vinícius Cândido de Carvalho
+* Ygor Escatolim Castor
 
 #### Tecnologias Configuradas
 
