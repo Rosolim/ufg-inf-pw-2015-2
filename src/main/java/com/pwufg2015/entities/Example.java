@@ -1,4 +1,4 @@
-package com.entities;
+package com.pwufg2015.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;

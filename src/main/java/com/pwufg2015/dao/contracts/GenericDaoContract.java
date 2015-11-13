@@ -1,4 +1,4 @@
-package com.dao.contracts;
+package com.pwufg2015.dao.contracts;
 
 /**
  * Created by cerradoweb on 01/09/15.

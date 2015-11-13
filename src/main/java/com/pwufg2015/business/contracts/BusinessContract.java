@@ -1,4 +1,4 @@
-package com.business.contracts;
+package com.pwufg2015.business.contracts;
 
 public interface BusinessContract<Entity> {
     void add(Entity entity);
