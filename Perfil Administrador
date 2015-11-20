@@ -1,0 +1,23 @@
+Perspectiva do administrador
+
+
+Escopo:
+
+O administrador, no escopo de um sistema de gestão acadêmica, é uma espécie de gerenciador de cadastros, 
+de notícias e também um moderador. Ele consegue ver quase tudo o que o professor e o aluno vê, 
+com exceção dos dados confidenciais do professor, como provas, notas, presença entre outros.
+Não há necessidade de seus dados aparecerem no ambiente, além de um email para contato.
+	Dentre as operações que ele executa, estão aqui as mais importantes:
+
+Cadastro/Remoção:
+Alunos;
+Professores;
+Cursos;
+Notícias;
+Escolha de templates, layouts e plugins do site
+Moderar fóruns
+	Linguagens ou assuntos impróprios;
+	Tópicos ociosos;
+Controlar a forma de incrição e login de novos usuários do sistema
+	Seja por confimação de email no caso de login ou feito manual no sistema através do administrador
+Auxilio com o acesso ao sistema no caso de perda total de login
