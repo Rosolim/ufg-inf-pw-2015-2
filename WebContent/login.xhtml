@@ -7,17 +7,22 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 
-<h:body>
-	<ui:composition template="template.xhtml">
-		<ui:define name="main-content">
-			<div class="login-container vertical-align-center">
-				<div class="container">
-					<div class="row">
-						<img src="images/login/logo.png" alt="logo"></img>
+<ui:composition template="template.xhtml">
+
+	<ui:define name="extra-css">
+		<h:outputStylesheet name="login.css" library="css" />
+	</ui:define>
+
+	<ui:define name="main-content">
+		<div class="login-container vertical-align-center">
+			<div class="container">
+				<h:graphicImage library="images" name="login/logo.png" />
+				<header id="login-header">
+				   <h1>Simple School Admin</h1>
+				</header>
+				<div class="row">
+					<div class="col-md-offset-3 col-md-6">
 						<div class="login-panel panel panel-default">
-							<div class="panel-heading">
-								<h3 class="panel-title">Simple School Admin</h3>
-							</div>
 							<div class="panel-body">
 								<form role="form">
 									<fieldset>
@@ -38,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-		</ui:define>
-	</ui:composition>
-</h:body>
+		</div>
+	</ui:define>
+</ui:composition>
 </html>
