@@ -1,8 +1,23 @@
 body, html {
-
-    font-size: 0.825em;
-    font-family: 'Open Sans', sans-serif;
-
+	height: 100%;
 }
 
+.vertical-align-center {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
 
+/*=======================================*
+ *                 Login                 *
+ *=======================================*/
+.login-container {
+	
+	height: 100%;
+	
+}
+ 
