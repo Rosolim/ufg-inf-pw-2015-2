@@ -35,3 +35,29 @@ Escopo:
    1. Notas
    2. Frequência
    3. Atividades postadas
+   
+   ________________________________________________________________________________________________________________
+   
+   Tela principal – DASHBOARD
+
+1. A tela muda de acordo com a permissão do usuário que acessou
+   1. Aluno
+   2. Professor
+   3. Administrador
+
+2. Tela principal do aluno
+   1. No local da dashboard atualizar como nome do aluno e uma mensagem de bem vindo
+2. Tela lateral
+   1. Home
+   2. Disciplinas
+      1. Histórico
+      2. Horários matriculados
+      3. Listar disciplinas
+      4. Boletim
+      5. Consultar Frequência
+      6. Atividades
+   3. Matriculas
+      1. Em disciplina
+      2. Em cursos de verão
+      3. Em cursos de inverno
+      4. Calendário Acadêmico
