@@ -12,38 +12,36 @@
 	<ui:define name="extra-css">
 		<h:outputStylesheet name="login.css" library="css" />
 	</ui:define>
-
 	<ui:define name="main-content">
 		<div class="login-container vertical-align-center">
-			<div class="container">
-				<h:graphicImage library="images" name="login/logo.png" />
-				<header id="login-header">
-				   <h1>Simple School Admin</h1>
-				</header>
-				<div class="row">
-					<div class="col-md-offset-3 col-md-6">
-						<div class="login-panel panel panel-default">
-							<div class="panel-body">
-								<form role="form">
-									<fieldset>
-										<div class="form-group">
-											<input class="form-control" placeholder="E-mail" name="email"
-												type="email"></input>
-										</div>
-										<div class="form-group">
-											<input class="form-control" placeholder="Password"
-												name="password" type="password" value=""></input>
-										</div>
-
-										<a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
-									</fieldset>
-								</form>
-							</div>
-						</div>
+		<div class="col-md-offset-4 col-md-4">
+		    <h:graphicImage library="images" name="login/logo.png" />
+			<form class="login">
+				<fieldset>
+					<legend class="legend">Login</legend>
+					<div class="input">
+						<input type="email" placeholder="Usuário" required="true" /> <span><i
+							class="fa fa-envelope-o"></i></span>
 					</div>
+					<div class="input">
+						<input type="password" placeholder="Senha" required="true" />
+						<span><i class="fa fa-lock"></i></span>
+					</div>
+					<button type="submit" class="submit">
+						<i class="fa fa-long-arrow-right"></i>
+					</button>
+				</fieldset>
+				<div class="feedback">
+	
 				</div>
-			</div>
+			</form>
+		</div>
 		</div>
 	</ui:define>
+
+	<ui:define name="extra-scripts">
+		<h:outputScript library="js" name="login.js" target="body" />
+	</ui:define>
+
 </ui:composition>
 </html>
