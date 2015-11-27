@@ -61,3 +61,7 @@ Escopo:
       2. Em cursos de verão
       3. Em cursos de inverno
       4. Calendário Acadêmico
+3. Tela do meio
+   1. Atividades cadastradas
+   2. Disciplinas cadastradas
+   3. Informações do usuário
