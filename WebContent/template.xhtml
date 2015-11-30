@@ -2,38 +2,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 
 <h:head>
-	<f:facet name="metatags">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Simple School Admin</title>
-	</f:facet>
+    <f:facet name="metatags">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Simple School Admin</title>
+    </f:facet>
 
-	<f:facet name="stylesheets">
-		<h:outputStylesheet library="bower_components" name="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-		<h:outputStylesheet library="bower_components" name="metisMenu/dist/metisMenu.min.css" rel="stylesheet" type="text/css"/>
-		<h:outputStylesheet library="css" name="style.css" rel="stylesheet" type="text/css"/>
-        <ui:insert name="extra-css"/>
-	</f:facet>
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
+    <h:outputStylesheet library="components" name="bootstrap/bootstrap.min.css" rel="stylesheet"
+                        type="text/css"/>
+    <h:outputStylesheet library="css" name="style.css" rel="stylesheet" type="text/css"/>
+    <ui:insert name="extra-css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
 </h:head>
 
 <h:body>
-	<ui:insert name="main-content" />
-	
-	<f:facet name="scripts">
-	    <h:outputScript library="bower_components" name="jquery/dist/jquery.min.js" target="body"/>
-	    <h:outputScript library="bower_components" name="bootstrap/dist/js/bootstrap.min.js" target="body"/>
-	    <h:outputScript library="dist" name="js/sb-admin-2.js" target="body"/>
-		<ui:insert name="extra-scripts"/>
-	</f:facet>
+    <ui:insert name="main-content"/>
+
+    <h:outputScript library="components" name="jquery/jquery.min.js" target="body"/>
+    <h:outputScript library="components" name="bootstrap/bootstrap.min.js" target="body"/>
+    <ui:insert name="extra-scripts"/>
 
 </h:body>
 </html>
