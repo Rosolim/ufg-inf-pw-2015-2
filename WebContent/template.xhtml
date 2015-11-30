@@ -17,17 +17,45 @@
 
     <h:outputStylesheet library="components" name="bootstrap/bootstrap.min.css" rel="stylesheet"
                         type="text/css"/>
+    <h:outputStylesheet library="components" name="bootstrap-switch/bootstrap-switch.min.css" rel="stylesheet"
+                        type="text/css"/>
+    <h:outputStylesheet library="components" name="animate.css/animate.min.css" rel="stylesheet"
+                        type="text/css"/>
+    <h:outputStylesheet library="components" name="iCheck/skins/flat/_all.css" rel="stylesheet"
+                        type="text/css"/>
+    <h:outputStylesheet library="components" name="DataTables/media/css/jquery.dataTables.min.css" rel="stylesheet"
+                        type="text/css"/>
+    <h:outputStylesheet library="components" name="select2/dist/css/select2.min.css" rel="stylesheet"
+                        type="text/css"/>
+    <h:outputStylesheet library="components" name="dataTablesBootstrap/dataTables.bootstrap.css" rel="stylesheet"
+                        type="text/css"/>
     <h:outputStylesheet library="css" name="style.css" rel="stylesheet" type="text/css"/>
-    <ui:insert name="extra-css"/>
+    <h:outputStylesheet library="css" name="themes.css" rel="stylesheet" type="text/css"/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
+
+    <ui:insert name="extra-css"/>
+
 </h:head>
 
-<h:body>
+<h:body styleClass="flat-blue">
+
     <ui:insert name="main-content"/>
 
     <h:outputScript library="components" name="jquery/jquery.min.js" target="body"/>
     <h:outputScript library="components" name="bootstrap/bootstrap.min.js" target="body"/>
+    <h:outputScript library="components" name="chartjs/Chart.min.js" target="body"/>
+    <h:outputScript library="components" name="bootstrap-switch/bootstrap-switch.min.js" target="body"/>
+    <h:outputScript library="components" name="iCheck/icheck.min.js" target="body"/>
+    <h:outputScript library="components" name="matchHeight/jquery.matchHeight-min.js" target="body"/>
+    <h:outputScript library="components" name="DataTables/media/js/jquery.dataTables.min.js" target="body"/>
+    <h:outputScript library="components" name="select2/dist/js/select2.full.min.js" target="body"/>
+    <h:outputScript library="components" name="dataTablesBootstrap/dataTables.bootstrap.js" target="body"/>
+    <h:outputScript library="components" name="ace/ace.js" target="body"/>
+    <h:outputScript library="components" name="ace/mode-html.js" target="body"/>
+    <h:outputScript library="components" name="ace/theme-github.js" target="body"/>
+    <h:outputScript library="js" name="app.js" target="body"/>
+
     <ui:insert name="extra-scripts"/>
 
 </h:body>
