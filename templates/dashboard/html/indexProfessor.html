@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Simple School Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<!-- Fonts -->
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900'
+	rel='stylesheet' type='text/css'>
+<!-- CSS Libs -->
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/animate.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/iCheck/skins/flat/_all.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/DataTables/media/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/select2/dist/css/select2.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../vendor/css/dataTables.bootstrap.css">
+<!-- CSS App -->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/themes.css">
+</head>
+
+<body class="flat-orange">
+	<div class="app-container">
+		<div class="row content-container">
+			<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-expand-toggle">
+							<i class="fa fa-bars icon"></i>
+						</button>
+						<ol class="breadcrumb navbar-breadcrumb">
+							<li class="active">Bem vindo, Usuário!</li>
+						</ol>
+						<button type="button"
+							class="navbar-right-expand-toggle pull-right visible-xs">
+							<i class="fa fa-th icon"></i>
+						</button>
+					</div>
+					<ul class="nav navbar-nav navbar-right">
+						<button type="button"
+							class="navbar-right-expand-toggle pull-right visible-xs">
+							<i class="fa fa-times icon"></i>
+						</button>
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-expanded="false"><i
+								class="fa fa-comments-o"></i></a>
+							<ul class="dropdown-menu animated fadeInDown">
+								<li class="title">Notification <span
+									class="badge pull-right">0</span>
+								</li>
+								<li class="message">No new notification</li>
+							</ul></li>
+						<li class="dropdown profile"><a href="#"
+							class="dropdown-toggle" data-toggle="dropdown" role="button"
+							aria-expanded="false">Bart Simpson <span class="caret"></span></a>
+							<ul class="dropdown-menu animated fadeInDown">
+								<li>
+									<div class="profile-info">
+										<h4 class="username">Bart Simpson</h4>
+										<p>bart@simpson.com</p>
+										<div class="btn-group margin-bottom-2x" role="group">
+											<button type="button" class="btn btn-default">
+												<i class="fa fa-sign-out"></i> Sair
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="side-menu">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="side-menu-container">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">
+								<div class="icon fa fa-graduation-cap"></div>
+								<div class="title">Simple School Admin</div>
+							</a>
+							<button type="button"
+								class="navbar-expand-toggle pull-right visible-xs">
+								<i class="fa fa-times icon"></i>
+							</button>
+						</div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="indexProfessor.html"> <span
+									class="icon fa fa-desktop"></span><span class="title">Página Inicial</span>
+							</a></li>
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#dropdown-avaliacao"> <span
+									class="icon fa fa-file-text-o"></span> <span class="title">Avaliações</span>
+							</a>
+								<div id="dropdown-avaliacao" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="#">Nova
+													avaliação</a></li>
+											<li><a href="#">Visualizar
+													avaliações</a></li>
+
+										</ul>
+									</div>
+								</div></li>
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#dropdown-form"> <span
+									class="icon fa fa-table"></span><span class="title">Frequência</span>
+							</a> <!-- Dropdown level 1 -->
+								<div id="dropdown-form" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="form/lancafrequencias.html">Lançar
+													frequência</a></li>
+											<li><a href="form/visualizafrequencias.html">Visualizar
+													frequência cadastradas</a></li>
+										</ul>
+									</div>
+								</div></li>
+							<!-- Dropdown Atividades-->
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#component-example"> <span
+									class="icon fa fa-slack"></span><span class="title">Atividades</span>
+							</a> <!-- Dropdown level 1 -->
+								<div id="component-example" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="components/novaatividade.html">Cadastrar
+													atividade</a></li>
+											<li><a href="components/atividades.html">Gerenciar
+													atividades</a></li>
+											<li><a href="components/atividadenotas.html">Lançar
+													notas</a></li>
+										</ul>
+									</div>
+								</div></li>
+							<!-- Dropdown Alunos-->
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#dropdown-example"> <span
+									class="icon fa glyphicon glyphicon-user"></span><span
+									class="title">Alunos</span>
+							</a> <!-- Dropdown level 1 -->
+								<div id="dropdown-example" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="pages/discentes.html">Perfil dos
+													discentes</a></li>
+										</ul>
+									</div>
+								</div></li>
+						</ul>
+						</div>
+				</nav>
+				</div>
+				<!-- Main Content -->
+			<div class="container-fluid">
+				<div class="side-body padding-top">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+							<a href="/avaliacoes.html">
+								<div class="card red summary-inline">
+									<div class="card-body">
+										<i class="icon fa fa-file-text fa-4x"></i>
+										<div class="content">
+											<div class="title">2</div>
+											<div class="sub-title">Avaliações pendentes</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+							<a href="/frequencia.html">
+								<div class="card yellow summary-inline">
+									<div class="card-body">
+										<i class="icon fa fa-exclamation-triangle fa-4x"></i>
+										<div class="content">
+											<div class="title">1</div>
+											<div class="sub-title">Aula(s) sem frequência</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+							<a href="/atividades.html">
+								<div class="card blue summary-inline">
+									<div class="card-body">
+										<i class="icon fa fa-tags fa-4x"></i>
+										<div class="content">
+											<div class="title">4</div>
+											<div class="sub-title">Atividades abertas</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+<!-- 		</div> -->
+		<div class="row  no-margin-bottom"></div>
+
+<!-- 	</div> -->
+	<footer class="app-footer">
+		<div class="wrapper">
+			<span class="pull-right">Simple School Admin<a
+				href="index.html"><i class="fa fa-long-arrow-up"></i></a></span>
+		</div>
+	</footer>
+	<!-- 	<div> -->
+	<!-- Javascript Libs -->
+	<script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../lib/js/Chart.min.js"></script>
+	<script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript"
+		src="../lib/js/jquery.matchHeight-min.js"></script>
+	<script type="text/javascript" src="../lib/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript"
+		src="../lib/js/dataTables.bootstrap.min.js"></script>
+	<script type="text/javascript" src="../lib/js/select2.full.min.js"></script>
+	<script type="text/javascript" src="../lib/js/ace/ace.js"></script>
+	<script type="text/javascript" src="../lib/js/ace/mode-html.js"></script>
+	<script type="text/javascript" src="../lib/js/ace/theme-github.js"></script>
+	<!-- Javascript -->
+	<script type="text/javascript" src="../js/app.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+</body>
+
+</html>
