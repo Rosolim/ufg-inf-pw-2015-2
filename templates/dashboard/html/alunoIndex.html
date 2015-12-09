@@ -43,27 +43,105 @@
 							<i class="fa fa-bars icon"></i>
 						</button>
 						<ol class="breadcrumb navbar-breadcrumb">
-							<li class="active">Bem Vindo, %u !</li>
+							<li class="active">Bem Vindo, Usuário!</li>
 						</ol>
 						<button type="button"
 							class="navbar-right-expand-toggle pull-right visible-xs">
 							<i class="fa fa-th icon"></i>
 						</button>
 					</div>
+					<!-- Início da barra de ferramentas superior -->
 					<ul class="nav navbar-nav navbar-right">
-						<button type="button"
-							class="navbar-right-expand-toggle pull-right visible-xs">
-							<i class="fa fa-times icon"></i>
-						</button>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown" role="button" aria-expanded="false"><i
-								class="fa fa-comments-o"></i></a>
-							<ul class="dropdown-menu animated fadeInDown">
-								<li class="title">Notification <span
-									class="badge pull-right">0</span>
-								</li>
-								<li class="message">No new notification</li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="index.jsp#"> <i
+								class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+						</a>
+							<ul class="dropdown-menu dropdown-messages">
+								<li><a href="index.jsp#">
+										<div>
+											<strong>Ygor Castor</strong>
+										</div>
+										<div>
+											Professor tenho uma dúvida a respeito de como criar o Web.xml
+											em um maven project. Pode me ajudar <span
+												class="pull-right text-muted"> <em>Matemática</em>
+											</span>
+										</div>
+
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="index.jsp#">
+										<div>
+											<strong>Gerson Rosolim</strong>
+										</div>
+										<div>
+											Sendo a taxa de juros na tabela francesa de calculo de
+											financiamento, um valor fixo, como é feita a variação? <span
+												class="pull-right text-muted"> <em>Química</em>
+											</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="index.jsp#">
+										<div>
+											<strong>Beto Barbosa</strong>
+										</div>
+										<div>
+											Adocica meu amor, adocica! <span
+												class="pull-right text-muted"> <em>Física</em>
+											</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a class="text-center" href="forum.jsp"> <strong>Read
+											All Messages</strong> <i class="fa fa-angle-right"></i>
+								</a></li>
 							</ul></li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="index.jsp#"> <i
+								class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+						</a>
+							<ul class="dropdown-menu dropdown-alerts">
+								<li><a href="index.jsp#">
+										<div>
+											<i class="fa fa-comment fa-fw"></i> New Comment <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="index.jsp#">
+										<div>
+											<i class="fa fa-twitter fa-fw"></i> 3 New Followers <span
+												class="pull-right text-muted small">12 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="index.jsp#">
+										<div>
+											<i class="fa fa-envelope fa-fw"></i> Message Sent <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="index.jsp#">
+										<div>
+											<i class="fa fa-tasks fa-fw"></i> New Task <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="index.jsp#">
+										<div>
+											<i class="fa fa-upload fa-fw"></i> Server Rebooted <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a class="text-center" href="index.jsp#"> <strong>See
+											All Alerts</strong> <i class="fa fa-angle-right"></i>
+								</a></li>
+							</ul> <!-- /.dropdown-alerts --></li>
+						<!-- /.dropdown -->
 						<li class="dropdown profile"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown" role="button"
 							aria-expanded="false">Bart Simpson <span class="caret"></span></a>
@@ -80,6 +158,7 @@
 									</div>
 								</li>
 							</ul></li>
+
 					</ul>
 				</div>
 			</nav>
@@ -98,45 +177,35 @@
 						</div>
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="index.html"> <span
-									class="icon fa fa-tachometer"></span> <span class="title">Home</span>
+									class="icon fa fa-home"></span> <span class="title">Home</span>
 							</a></li>
 							<li class="panel panel-default dropdown"><a
 								data-toggle="collapse" href="#dropdown-user"> <span
-									class="icon fa fa-user"></span> <span class="title">Usuários</span>
+									class="icon fa fa-list"></span> <span class="title">Disciplinas</span>
 							</a>
 								<div id="dropdown-user" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
-											<li><a href="#">Listar Usuários</a></li>
-											<li><a href="#">Novo Perfil</a></li>
+											<li><a href="history.jsp">Histórico</a></li>
+											<li><a href="showMatricula.jsp">Horários
+													Matriculados</a></li>
+											<li><a href="listDisciplinas.jsp">Listar Disciplinas</a></li>
+											<li><a href="notas.jsp">Boletim</a></li>
+											<li><a href="frequência.jsp">Consultar frequência</a></li>
+											<li><a href="atividade.jsp">Atividade</a></li>
 										</ul>
 									</div>
 								</div></li>
 							<li class="panel panel-default dropdown"><a
-								data-toggle="collapse" href="#dropdown-pedag"> <span
-									class="icon fa fa-university"></span> <span class="title">Pedagógico</span>
+								data-toggle="collapse" href="#dropdown-ca"> <span
+									class="icon fa fa-table"></span> <span class="title">Calendário
+										Acadêmico</span>
 							</a>
-								<div id="dropdown-pedag" class="panel-collapse collapse">
+								<div id="dropdown-ca" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
-											<li><a href="#">Listar Turmas</a></li>
-											<li><a href="#">Listar Disciplinas</a></li>
-											<li><a href="#">Projetos Pedagógicos</a></li>
-											<li><a href="#">Calendário Acadêmico</a></li>
-											<li><a href="#">Horários</a></li>
-										</ul>
-									</div>
-								</div></li>
-							<li class="panel panel-default dropdown"><a
-								data-toggle="collapse" href="#dropdown-admin"> <span
-									class="icon fa fa-suitcase"></span> <span class="title">Administrativo</span>
-							</a>
-								<div id="dropdown-admin" class="panel-collapse collapse">
-									<div class="panel-body">
-										<ul class="nav navbar-nav">
-											<li><a href="#">Emitir Documentos</a></li>
-											<li><a href="#">Recursos Humanos</a></li>
-											<li><a href="#">Configurações</a></li>
+											<li><a href="history.jsp">Consultar</a></li>
+											<li><a href="showMatricula.jsp">Download</a></li>
 										</ul>
 									</div>
 								</div></li>
@@ -148,42 +217,56 @@
 			<div class="container-fluid">
 				<div class="side-body padding-top">
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="col-lg-3 col-md-6">
 							<a href="#">
-								<div class="card red summary-inline">
+								<div class="card blue summary-inline">
 									<div class="card-body">
-										<i class="icon fa fa-exclamation-triangle fa-4x"></i>
+										<i class="icon fa fa-comments fa-4x"></i>
 										<div class="content">
-											<div class="title">5</div>
-											<div class="sub-title">Pendências</div>
+											<div class="title">26</div>
+											<div class="sub-title">Novas Interações</div>
 										</div>
 										<div class="clear-both"></div>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<a href="#">
-								<div class="card yellow summary-inline">
-									<div class="card-body">
-										<i class="icon fa fa-file-text fa-4x"></i>
-										<div class="content">
-											<div class="title">1</div>
-											<div class="sub-title">Requisições</div>
-										</div>
-										<div class="clear-both"></div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="col-lg-3 col-md-6">
 							<a href="#">
 								<div class="card green summary-inline">
 									<div class="card-body">
-										<i class="icon fa fa-calendar fa-4x"></i>
+										<i class="icon fa fa fa-tasks fa-4x"></i>
+										<div class="content">
+											<div class="title">16</div>
+											<div class="sub-title">Atividades</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<a href="#">
+								<div class="card yellow summary-inline">
+									<div class="card-body">
+										<i class="icon fa fa-folder-open fa-4x"></i>
 										<div class="content">
 											<div class="title">3</div>
-											<div class="sub-title">Eventos próximos</div>
+											<div class="sub-title">Tarefas para semana</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<a href="#">
+								<div class="card red summary-inline">
+									<div class="card-body">
+										<i class="icon fa fa-bomb fa-4x"></i>
+										<div class="content">
+											<div class="title">5</div>
+											<div class="sub-title">Tarefas atrasadas</div>
 										</div>
 										<div class="clear-both"></div>
 									</div>
