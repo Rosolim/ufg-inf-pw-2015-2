@@ -29,10 +29,5 @@
     return $('.match-height').matchHeight();
   });
 
-  $(function() {
-    return $('.datatable').DataTable({
-      "dom": '<"top"fl<"clear">>rt<"bottom"ip<"clear">>'
-    });
-  });
 
 }).call(this);
