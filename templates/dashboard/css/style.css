@@ -570,6 +570,7 @@ a:hover {
 
 .card .card-body .btn {
   float: right;
+  margin-left: 1em;
 }
 
 .card .card-body .sub-title {
