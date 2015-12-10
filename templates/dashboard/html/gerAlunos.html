@@ -979,7 +979,7 @@
                       </tr>
                     </tbody>
                   </table>
-<button type="button" class="btn btn-primary">Matricular Aluno</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createStudent">Matricular Aluno</button>
                 </div>
               </div>
             </div>
@@ -992,29 +992,148 @@
           <span class="pull-right">2.0 <a href=""><i class="fa fa-long-arrow-up"></i></a></span> © 2015 Copyright.
         </div>
       </footer>
-      <div>
-        <!-- Javascript Libs -->
-        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../bower_components/chartjs/Chart.min.js"></script>
-        <script type="text/javascript" src="../bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
-        <script type="text/javascript" src="../bower_components/iCheck/icheck.min.js"></script>
-        <script type="text/javascript" src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script>
-        <script type="text/javascript" src="../bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="../bower_components/select2/dist/js/select2.full.min.js"></script>
-        <script type="text/javascript" src="../vendor/js/dataTables.bootstrap.js"></script>
-        <script type="text/javascript" src="../vendor/js/ace/ace.js"></script>
-        <script type="text/javascript" src="../vendor/js/ace/mode-html.js"></script>
-        <script type="text/javascript" src="../vendor/js/ace/theme-github.js"></script>
-        <!-- Javascript -->
-        <script type="text/javascript" src="../js/app.js"></script>
-        <script type="text/javascript" src="../js/chartjs.js"></script>
+    </div>
+  </div>
 
-        <script type="text/javascript">
-          $('#alunotable').DataTable({
-            responsive: true
-          });
-        </script>
+  <div class="modal fade modal-info" id="createStudent" tabindex="-1" role="dialog" aria-labelledby="studentModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Matricular Aluno</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <form class="" action="index.html" method="post">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class="row">
+                    <div class="form-group">
+                      <label for="name">Nome:</label>
+                      <input type="text" class="form-control" id="name" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="birthdate">Data de Nascimento:</label>
+                      <input type="date" class="form-control" id="birthdate" placeholder="" required>
+                    </div>
+                    <div class="row no-margin-bottom">
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group">
+                          <label for="rg">RG:</label>
+                          <input type="text" class="form-control" id="rg" placeholder="" required>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group">
+                          <label for="cpf">CPF:</label>
+                          <input type="text" class="form-control" id="cpf" placeholder="" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row no-margin-bottom">
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group">
+                          <label for="phone">Telefone:</label>
+                          <input type="text" class="form-control" id="phone" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-group">
+                          <label for="cellphone">Celular:</label>
+                          <input type="text" class="form-control" id="cellphone" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">E-Mail:</label>
+                      <input type="email" class="form-control" id="email" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="class">Turma:</label>
+                      <select class="form-control" id="class">
+                        <option value="1">1º Ano</option>
+                        <option value="2">2º Ano</option>
+                        <option value="3">3º Ano</option>
+                      </select>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <label for="respname">Nome Responsável:</label>
+                    <input type="text" class="form-control" id="respname" placeholder="">
+                  </div>
+                  <div class="row no-margin-bottom">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="rgresp">RG:</label>
+                        <input type="text" class="form-control" id="rgresp" placeholder="" required>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="cpfresp">CPF:</label>
+                        <input type="text" class="form-control" id="cpfresp" placeholder="" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-margin-bottom">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="phoneresp">Telefone:</label>
+                        <input type="text" class="form-control" id="phoneresp" placeholder="">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group">
+                        <label for="cellphoneresp">Celular:</label>
+                        <input type="text" class="form-control" id="cellphoneresp" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="emailresp">E-Mail:</label>
+                    <input type="email" class="form-control" id="emailresp" placeholder="">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Matricular</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Javascript Libs -->
+  <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../bower_components/chartjs/Chart.min.js"></script>
+  <script type="text/javascript" src="../bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+  <script type="text/javascript" src="../bower_components/iCheck/icheck.min.js"></script>
+  <script type="text/javascript" src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+  <script type="text/javascript" src="../bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="../bower_components/select2/dist/js/select2.full.min.js"></script>
+  <script type="text/javascript" src="../vendor/js/dataTables.bootstrap.js"></script>
+  <script type="text/javascript" src="../vendor/js/ace/ace.js"></script>
+  <script type="text/javascript" src="../vendor/js/ace/mode-html.js"></script>
+  <script type="text/javascript" src="../vendor/js/ace/theme-github.js"></script>
+  <!-- Javascript -->
+  <script type="text/javascript" src="../js/app.js"></script>
+  <script type="text/javascript" src="../js/chartjs.js"></script>
+
+  <script type="text/javascript">
+    $('#alunotable').DataTable({
+      responsive: true
+    });
+  </script>
 </body>
 
 </html>

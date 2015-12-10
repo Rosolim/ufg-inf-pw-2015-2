@@ -22,7 +22,7 @@ body {
 
 .row.no-margin-bottom {
   & > [class*="col-"] {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 }
 
