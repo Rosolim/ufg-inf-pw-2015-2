@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<ui:composition template="/template.xhtml">
+    <ui:define name="top-bar">
+        <ui:include src="/admin/adminTopbar.xhtml"></ui:include>
+    </ui:define>
+    <ui:define name="side-bar">
+        <ui:include src="/admin/adminSidebar.xhtml"></ui:include>
+    </ui:define>
+
+    <ui:define name="main-content">
+        <div class="container-fluid">
+            <div class="side-body padding-top">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card yellow summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-comments fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">75%</div>
+                                        <div class="sub-title">Português</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card green summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa fa-plus-circle fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">100%</div>
+                                        <div class="sub-title">Matemática</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card yellow summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-flask fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">76%</div>
+                                        <div class="sub-title">Química</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card blue summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-tachometer fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">88%</div>
+                                        <div class="sub-title">Física</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card red summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-heartbeat fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">68%</div>
+                                        <div class="sub-title">Biologia</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card blue summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-language fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">82%</div>
+                                        <div class="sub-title">Inglês</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card green summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-history fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">100%</div>
+                                        <div class="sub-title">História</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#">
+                            <div class="card blue summary-inline">
+                                <div class="card-body">
+                                    <i class="icon fa fa-pagelines fa-4x"></i>
+                                    <div class="content">
+                                        <div class="title">90%</div>
+                                        <div class="sub-title">Geografia</div>
+                                    </div>
+                                    <div class="clear-both"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="app-footer">
+            <div class="wrapper">
+				<span class="pull-right">2.0 <a href=""><i
+                        class="fa fa-long-arrow-up"></i></a></span> © 2015 Copyright.
+            </div>
+        </footer>
+    </ui:define>
+</ui:composition>
+</html>

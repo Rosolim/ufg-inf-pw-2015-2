@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<ui:composition template="/template.xhtml">
+    <ui:define name="top-bar">
+        <ui:include src="/admin/adminTopbar.xhtml"></ui:include>
+    </ui:define>
+    <ui:define name="side-bar">
+        <ui:include src="/admin/adminSidebar.xhtml"></ui:include>
+    </ui:define>
+
+    <ui:define name="main-content">
+        <div class="container-fluid">
+            <div class="side-body">
+                <div class="page-title">
+                    <span class="title">Gerenciar Funcionários</span>
+                    <div class="description">Cadastros, excluir e gerenciar informações dos Funcionários</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <table id="funcionariotable" class="datatable table table-striped" cellspacing="0" width="100%">
+                                    <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Habitação</th>
+                                        <th>Telefone</th>
+                                        <th>Data de Contratação</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Hayes, Ebony E.</td>
+                                        <td>Professor</td>
+                                        <td>1-820-443-3024</td>
+                                        <td>03/29/1996</td>
+                                        <td>ATIVO</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary">Voltar</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createFuncionario">Novo Funcionário</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="app-footer">
+            <div class="wrapper">
+                <span class="pull-right">2.0 <a href=""><i class="fa fa-long-arrow-up"></i></a></span> © 2015 Copyright.
+            </div>
+        </footer>
+    </ui:define>
+
+    <ui:define name="outer-main">
+        <div class="modal fade modal-info" id="createFuncionario" tabindex="-1" role="dialog" aria-labelledby="funcionarioModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="funcionarioModal">Novo Funcionário</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <form class="" action="index.html" method="post">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <label for="name">Nome:</label>
+                                                <input type="text" class="form-control" id="name" placeholder="" required="true"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="birthdate">Data de Nascimento:</label>
+                                                <input type="date" class="form-control" id="birthdate" placeholder="" required="true"></input>
+                                            </div>
+                                            <div class="row no-margin-bottom">
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="rg">RG:</label>
+                                                        <input type="text" class="form-control" id="rg" placeholder="" required="true"></input>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="cpf">CPF:</label>
+                                                        <input type="text" class="form-control" id="cpf" placeholder="" required="true"></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row no-margin-bottom">
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="phone">Telefone:</label>
+                                                        <input type="text" class="form-control" id="phone" placeholder=""></input>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="cellphone">Celular:</label>
+                                                        <input type="text" class="form-control" id="cellphone" placeholder=""></input>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row no-margin-bottom">
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label for="email">E-Mail:</label>
+                                                        <input type="email" class="form-control" id="email" placeholder=""></input>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label for="salary">Remuneração:</label>
+                                                        <input type="number" class="form-control" id="salary"
+                                                               pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$"></input>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label for="class">Cargo:</label>
+                                                        <select class="form-control" id="class">
+                                                            <option value="1">Professor</option>
+                                                            <option value="2">Secretário</option>
+                                                            <option value="3">Segurança</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success">Novo Funcionário</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>
+
+
+</html>

@@ -43,27 +43,82 @@
 							<i class="fa fa-bars icon"></i>
 						</button>
 						<ol class="breadcrumb navbar-breadcrumb">
-							<li class="active">Bem vindo, Usuário!</li>
+							<li class="active">Bem Vindo, Usuário!</li>
 						</ol>
 						<button type="button"
 							class="navbar-right-expand-toggle pull-right visible-xs">
 							<i class="fa fa-th icon"></i>
 						</button>
 					</div>
+					<!-- Início da barra de ferramentas superior -->
 					<ul class="nav navbar-nav navbar-right">
-						<button type="button"
-							class="navbar-right-expand-toggle pull-right visible-xs">
-							<i class="fa fa-times icon"></i>
-						</button>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown" role="button" aria-expanded="false"><i
-								class="fa fa-comments-o"></i></a>
-							<ul class="dropdown-menu animated fadeInDown">
-								<li class="title">Notification <span
-									class="badge pull-right">0</span>
-								</li>
-								<li class="message">No new notification</li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="alunoIndex.html"> <i
+								class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+						</a>
+							<ul class="dropdown-menu dropdown-messages">
+								<li><a href="alunoIndex.html#">
+										<div>
+											<strong>Fulano da Silva</strong>
+										</div>
+										<div>
+											Professor tenho uma dúvida a respeito de como criar o Web.xml
+											em um maven project. Pode me ajudar <span
+												class="pull-right text-muted"> <em>Matemática</em>
+											</span>
+										</div>
+
+								</a></li>
+								<li class="divider"></li>
+								<li><a class="text-center" href="forum.html"> <strong>Read
+											All Messages</strong> <i class="fa fa-angle-right"></i>
+								</a></li>
 							</ul></li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="alunoIndex.html"> <i
+								class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+						</a>
+							<ul class="dropdown-menu dropdown-alerts">
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-comment fa-fw"></i> New Comment <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-twitter fa-fw"></i> 3 New Followers <span
+												class="pull-right text-muted small">12 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-envelope fa-fw"></i> Message Sent <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-tasks fa-fw"></i> New Task <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-upload fa-fw"></i> Server Rebooted <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a class="text-center" href="alunoIndex.html#"> <strong>See
+											All Alerts</strong> <i class="fa fa-angle-right"></i>
+								</a></li>
+							</ul> <!-- /.dropdown-alerts --></li>
+						<!-- /.dropdown -->
 						<li class="dropdown profile"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown" role="button"
 							aria-expanded="false">Bart Simpson <span class="caret"></span></a>
@@ -80,6 +135,7 @@
 									</div>
 								</li>
 							</ul></li>
+
 					</ul>
 				</div>
 			</nav>
@@ -97,84 +153,72 @@
 							</button>
 						</div>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="indexProfessor.html"> <span
-									class="icon fa fa-desktop"></span><span class="title">Página Inicial</span>
+							<li class="active"><a href="indexprofessor.html"> <span
+									class="icon fa fa-home"></span> <span class="title">Home</span>
 							</a></li>
 							<li class="panel panel-default dropdown"><a
-								data-toggle="collapse" href="#dropdown-avaliacao"> <span
-									class="icon fa fa-file-text-o"></span> <span class="title">Avaliações</span>
+								data-toggle="collapse" href="#dropdown-user"> <span
+									class="icon fa fa-file-text"></span> <span class="title">Avaliações</span>
 							</a>
-								<div id="dropdown-avaliacao" class="panel-collapse collapse">
+								<div id="dropdown-user" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
-											<li><a href="#">Nova
-													avaliação</a></li>
-											<li><a href="#">Visualizar
-													avaliações</a></li>
-
+											<li><a href="novaavaliacao.html">Nova avaliação</a></li>
+											<li><a href="avaliacoes.html">Visualizar avaliações</a></li>
 										</ul>
 									</div>
 								</div></li>
 							<li class="panel panel-default dropdown"><a
-								data-toggle="collapse" href="#dropdown-form"> <span
-									class="icon fa fa-table"></span><span class="title">Frequência</span>
-							</a> <!-- Dropdown level 1 -->
-								<div id="dropdown-form" class="panel-collapse collapse">
+								data-toggle="collapse" href="#dropdown-ca"> <span
+									class="icon fa fa-table"></span> <span class="title">Frequência</span>
+							</a>
+								<div id="dropdown-ca" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
-											<li><a href="form/lancafrequencias.html">Lançar
-													frequência</a></li>
-											<li><a href="form/visualizafrequencias.html">Visualizar
-													frequência cadastradas</a></li>
+											<li><a href="lancafrequencia.html">Lançar frequência</a></li>
+											<li><a href="freqalunos.html">Visualizar frequência
+													cadastrada</a></li>
 										</ul>
 									</div>
 								</div></li>
-							<!-- Dropdown Atividades-->
 							<li class="panel panel-default dropdown"><a
-								data-toggle="collapse" href="#component-example"> <span
-									class="icon fa fa-slack"></span><span class="title">Atividades</span>
-							</a> <!-- Dropdown level 1 -->
-								<div id="component-example" class="panel-collapse collapse">
+								data-toggle="collapse" href="#dropdown-at"> <span
+									class="icon fa fa-list"></span> <span class="title">Atividades</span>
+							</a>
+								<div id="dropdown-at" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
-											<li><a href="components/novaatividade.html">Cadastrar
-													atividade</a></li>
-											<li><a href="components/atividades.html">Gerenciar
-													atividades</a></li>
-											<li><a href="components/atividadenotas.html">Lançar
-													notas</a></li>
+											<li><a href="novaatividade.html">Cadastrar atividade</a></li>
+											<li><a href="ativprofessor.html">Gerenciar atividades</a></li>
 										</ul>
 									</div>
 								</div></li>
-							<!-- Dropdown Alunos-->
 							<li class="panel panel-default dropdown"><a
-								data-toggle="collapse" href="#dropdown-example"> <span
-									class="icon fa glyphicon glyphicon-user"></span><span
-									class="title">Alunos</span>
-							</a> <!-- Dropdown level 1 -->
-								<div id="dropdown-example" class="panel-collapse collapse">
+								data-toggle="collapse" href="#dropdown-aluno"> <span
+									class="icon fa fa-user"></span> <span class="title">Alunos</span>
+							</a>
+								<div id="dropdown-aluno" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
-											<li><a href="pages/discentes.html">Perfil dos
-													discentes</a></li>
+											<li><a href="professoralunos.html">Gerenciar alunos</a></li>
 										</ul>
 									</div>
 								</div></li>
 						</ul>
-						</div>
+					</div>
 				</nav>
-				</div>
-				<!-- Main Content -->
+			</div>
+			<!-- Main Content -->
 			<div class="container-fluid">
 				<div class="side-body padding-top">
 					<div class="row">
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<a href="/avaliacoes.html">
+						<div class="col-lg-4 col-md-6">
+							<a href="avaliacoes.html">
 								<div class="card red summary-inline">
 									<div class="card-body">
 										<i class="icon fa fa-file-text fa-4x"></i>
 										<div class="content">
-											<div class="title">2</div>
+											<div class="title">26</div>
 											<div class="sub-title">Avaliações pendentes</div>
 										</div>
 										<div class="clear-both"></div>
@@ -182,11 +226,11 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<a href="/frequencia.html">
-								<div class="card yellow summary-inline">
+						<div class="col-lg-4 col-md-6">
+							<a href="freqalunos.html">
+								<div class="card blue summary-inline">
 									<div class="card-body">
-										<i class="icon fa fa-exclamation-triangle fa-4x"></i>
+										<i class="icon fa fa fa-table fa-4x"></i>
 										<div class="content">
 											<div class="title">1</div>
 											<div class="sub-title">Aula(s) sem frequência</div>
@@ -196,14 +240,14 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-							<a href="/atividades.html">
-								<div class="card blue summary-inline">
+						<div class="col-lg-4 col-md-6">
+							<a href="ativprofessor.html">
+								<div class="card yellow summary-inline">
 									<div class="card-body">
-										<i class="icon fa fa-tags fa-4x"></i>
+										<i class="icon fa fa-folder-open fa-4x"></i>
 										<div class="content">
-											<div class="title">4</div>
-											<div class="sub-title">Atividades abertas</div>
+											<div class="title">3</div>
+											<div class="sub-title">Atividades sem nota</div>
 										</div>
 										<div class="clear-both"></div>
 									</div>
@@ -211,37 +255,112 @@
 							</a>
 						</div>
 					</div>
+					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+						<div class="row no-margin-bottom">
+							<div class="panel fresh-color panel-primary">
+								<div class="panel-heading">
+									<i class="fa fa-tasks fa-fw"></i> Atividades
+									<div class="pull-right"></div>
+								</div>
+								<!-- /.panel-heading -->
+								<div class="panel-body">
+									<div class="table-responsive">
+										<table class="table table-striped table-bordered table-hover">
+											<thead>
+												<tr>
+													<th>Cód.</th>
+													<th>Atividade</th>
+													<th>Turma</th>
+													<th>Prazo de entrega</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>	
+													<td>15</td>
+													<td>Lista de exercício 23</td>
+													<td>1º Ano B</td>
+													<td>20/12/2015</td>
+												</tr>
+												<tr>
+													<td>9</td>
+													<td>Pesquisa sobre Teoria de Grafos</td>
+													<td>2º Ano A</td>
+													<td>18/12/2015</td>
+												</tr>
+											</tbody>
+										</table>
+										<a href="atividades.html" class="btn btn-default btn-block">Ver
+											todas as atividades</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="panel fresh-color panel-primary">
+                                    <div class="panel-heading">
+                                        <i class="fa fa-graduation-cap fa-fw"></i> Seus Interesses
+                                    </div>
+                                    <!-- /.panel-heading -->
+                                    <div class="panel-body">
+                                        <div class="list-group">
+                                            <a href="indexprofessor.html" class="list-group-item"> <i
+                                                    class="fa fa-group fa-fw"></i> Alunos <span
+                                                    class="pull-right text-muted small"><em>93</em> </span>
+                                                    </a> <a href="indexprofessor.html" class="list-group-item"> <i
+                                                    class="fa fa-mortar-board fa-fw"></i> Disciplinas Ministradas <span
+                                                    class="pull-right text-muted small"><em>Matemática</em> </span>
+                                                    </a> <a href="indexprofessor.html" class="list-group-item"> <i
+                                                    class="fa fa-warning fa-fw"></i> Bimestre Letivo <span
+                                                    class="pull-right text-muted small"><em></em>4º Bim / 2015</span>
+                                                    </a> <a href="indexprofessor.html" class="list-group-item"> <i
+                                                    class="fa fa-calendar fa-fw"></i> Início Bimestre <span
+                                                    class="pull-right text-muted small"><em> 02/08/2015 </em></span>
+                                                    </a> <a href="indexprofessor.html" class="list-group-item"> <i
+                                                    class="fa fa-calendar fa-fw"></i> Término do Bimestre <span
+                                                    class="pull-right text-muted small"><em>06/12/2015</em>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 				</div>
-				
 			</div>
-<!-- 		</div> -->
-		<div class="row  no-margin-bottom"></div>
-
-<!-- 	</div> -->
-	<footer class="app-footer">
-		<div class="wrapper">
-			<span class="pull-right">Simple School Admin<a
-				href="index.html"><i class="fa fa-long-arrow-up"></i></a></span>
-		</div>
-	</footer>
-	<!-- 	<div> -->
-	<!-- Javascript Libs -->
-	<script type="text/javascript" src="../lib/js/jquery.min.js"></script>
-	<script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../lib/js/Chart.min.js"></script>
-	<script type="text/javascript" src="../lib/js/bootstrap-switch.min.js"></script>
-	<script type="text/javascript"
-		src="../lib/js/jquery.matchHeight-min.js"></script>
-	<script type="text/javascript" src="../lib/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript"
-		src="../lib/js/dataTables.bootstrap.min.js"></script>
-	<script type="text/javascript" src="../lib/js/select2.full.min.js"></script>
-	<script type="text/javascript" src="../lib/js/ace/ace.js"></script>
-	<script type="text/javascript" src="../lib/js/ace/mode-html.js"></script>
-	<script type="text/javascript" src="../lib/js/ace/theme-github.js"></script>
-	<!-- Javascript -->
-	<script type="text/javascript" src="../js/app.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>
+			<footer class="app-footer">
+				<div class="wrapper">
+					<span class="pull-right">2.0 <a href=""><i
+							class="fa fa-long-arrow-up"></i></a></span> © 2015 Copyright.
+				</div>
+			</footer>
+			<div>
+				<!-- Javascript Libs -->
+				<script type="text/javascript"
+					src="../bower_components/jquery/dist/jquery.min.js"></script>
+				<script type="text/javascript"
+					src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+				<script type="text/javascript"
+					src="../bower_components/chartjs/Chart.min.js"></script>
+				<script type="text/javascript"
+					src="../bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+				<script type="text/javascript"
+					src="../bower_components/iCheck/icheck.min.js"></script>
+				<script type="text/javascript"
+					src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+				<script type="text/javascript"
+					src="../bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+				<script type="text/javascript"
+					src="../bower_components/select2/dist/js/select2.full.min.js"></script>
+				<script type="text/javascript"
+					src="../vendor/js/dataTables.bootstrap.js"></script>
+				<script type="text/javascript" src="../vendor/js/ace/ace.js"></script>
+				<script type="text/javascript" src="../vendor/js/ace/mode-html.js"></script>
+				<script type="text/javascript"
+					src="../vendor/js/ace/theme-github.js"></script>
+				<!-- Javascript -->
+				<script type="text/javascript" src="../js/app.js"></script>
+				<script type="text/javascript" src="../js/chartjs.js"></script>
+				</div>
 </body>
 
 </html>

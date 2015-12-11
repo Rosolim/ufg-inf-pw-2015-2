@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Simple School Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<!-- Fonts -->
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900'
+	rel='stylesheet' type='text/css'>
+<!-- CSS Libs -->
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/animate.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/iCheck/skins/flat/_all.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/DataTables/media/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../bower_components/select2/dist/css/select2.min.css">
+<link rel="stylesheet" type="text/css"
+	href="../vendor/css/dataTables.bootstrap.css">
+<!-- CSS App -->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/themes.css">
+</head>
+
+<body class="flat-orange">
+	<div class="app-container">
+		<div class="row content-container">
+			<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-expand-toggle">
+							<i class="fa fa-bars icon"></i>
+						</button>
+						<ol class="breadcrumb navbar-breadcrumb">
+							<li class="active">Bem Vindo, Usuário!</li>
+						</ol>
+						<button type="button"
+							class="navbar-right-expand-toggle pull-right visible-xs">
+							<i class="fa fa-th icon"></i>
+						</button>
+					</div>
+					<!-- Início da barra de ferramentas superior -->
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="alunoIndex.html"> <i
+								class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+						</a>
+							<ul class="dropdown-menu dropdown-messages">
+								<li><a href="alunoIndex.html#">
+										<div>
+											<strong>Fulano da Silva</strong>
+										</div>
+										<div>
+											Professor tenho uma dúvida a respeito de como criar o Web.xml
+											em um maven project. Pode me ajudar <span
+												class="pull-right text-muted"> <em>Matemática</em>
+											</span>
+										</div>
+
+								</a></li>
+								<li class="divider"></li>
+								<li><a class="text-center" href="forum.html"> <strong>Read
+											All Messages</strong> <i class="fa fa-angle-right"></i>
+								</a></li>
+							</ul></li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="alunoIndex.html"> <i
+								class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+						</a>
+							<ul class="dropdown-menu dropdown-alerts">
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-comment fa-fw"></i> New Comment <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-twitter fa-fw"></i> 3 New Followers <span
+												class="pull-right text-muted small">12 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-envelope fa-fw"></i> Message Sent <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-tasks fa-fw"></i> New Task <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a href="alunoIndex.html#">
+										<div>
+											<i class="fa fa-upload fa-fw"></i> Server Rebooted <span
+												class="pull-right text-muted small">4 minutes ago</span>
+										</div>
+								</a></li>
+								<li class="divider"></li>
+								<li><a class="text-center" href="alunoIndex.html#"> <strong>See
+											All Alerts</strong> <i class="fa fa-angle-right"></i>
+								</a></li>
+							</ul> <!-- /.dropdown-alerts --></li>
+						<!-- /.dropdown -->
+						<li class="dropdown profile"><a href="#"
+							class="dropdown-toggle" data-toggle="dropdown" role="button"
+							aria-expanded="false">Bart Simpson <span class="caret"></span></a>
+							<ul class="dropdown-menu animated fadeInDown">
+								<li>
+									<div class="profile-info">
+										<h4 class="username">Bart Simpson</h4>
+										<p>bart@simpson.com</p>
+										<div class="btn-group margin-bottom-2x" role="group">
+											<button type="button" class="btn btn-default">
+												<i class="fa fa-sign-out"></i> Sair
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul></li>
+
+					</ul>
+				</div>
+			</nav>
+			<div class="side-menu">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="side-menu-container">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">
+								<div class="icon fa fa-graduation-cap"></div>
+								<div class="title">Simple School Admin</div>
+							</a>
+							<button type="button"
+								class="navbar-expand-toggle pull-right visible-xs">
+								<i class="fa fa-times icon"></i>
+							</button>
+						</div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="indexprofessor.html"> <span
+									class="icon fa fa-home"></span> <span class="title">Home</span>
+							</a></li>
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#dropdown-user"> <span
+									class="icon fa fa-file-text"></span> <span class="title">Avaliações</span>
+							</a>
+								<div id="dropdown-user" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="novaavaliacao.html">Nova avaliação</a></li>
+											<li><a href="avaliacoes.html">Visualizar avaliações</a></li>
+										</ul>
+									</div>
+								</div></li>
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#dropdown-ca"> <span
+									class="icon fa fa-table"></span> <span class="title">Frequência</span>
+							</a>
+								<div id="dropdown-ca" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="lancafrequencia.html">Lançar frequência</a></li>
+											<li><a href="freqalunos.html">Visualizar frequência cadastrada</a></li>
+											</ul>
+									</div>
+								</div></li>
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#dropdown-at"> <span
+									class="icon fa fa-list"></span> <span class="title">Atividades</span>
+							</a>
+								<div id="dropdown-at" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="novaatividade.html">Cadastrar atividade</a></li>
+											<li><a href="ativprofessor.html">Gerenciar atividades</a></li>
+											</ul>
+									</div>
+								</div></li>
+							<li class="panel panel-default dropdown"><a
+								data-toggle="collapse" href="#dropdown-aluno"> <span
+									class="icon fa fa-user"></span> <span class="title">Alunos</span>
+							</a>
+								<div id="dropdown-aluno" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul class="nav navbar-nav">
+											<li><a href="professoralunos.html">Gerenciar alunos</a></li>
+											</ul>
+									</div>
+								</div></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<!-- Main Content -->
+			<div class="container-fluid">
+				<div class="side-body padding-top">
+						<div class="row">
+						<div class="col-xs-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">
+										<div class="title">Dados gerais dos alunos</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<table class="datatable table table-striped" cellspacing="0"
+										width="100%">
+										<thead>
+											<tr>
+												<th>Matéria</th>
+												<th>Aluno</th>
+												<th>Cursado em</th>
+												<th>Nota global</th>
+												<th>Frequência global</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Matemática</td>
+												<td>Fulano da Silva</td>
+												<td>2015</td>
+												<td>8,8</td>
+												<td>97%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Larissa da Silva</td>
+												<td>2006</td>
+												<td>9,8</td>
+												<td>82%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Juliana da Silva</td>
+												<td>2007</td>
+												<td>6,8</td>
+												<td>75%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Barbara da Silva</td>
+												<td>2008</td>
+												<td>6,5</td>
+												<td>68%</td>
+												<td>RN</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Amanda da Silva</td>
+												<td>2009</td>
+												<td>5,7</td>
+												<td>49%</td>
+												<td>RF e RN</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Leticia da Silva</td>
+												<td>2010</td>
+												<td>8,4</td>
+												<td>89%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Jessica da Silva</td>
+												<td>2011</td>
+												<td>7,8</td>
+												<td>78%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Mariana da Silva</td>
+												<td>2012</td>
+												<td>7,2</td>
+												<td>79%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Pedro da Silva</td>
+												<td>2013</td>
+												<td>7,8</td>
+												<td>78%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Maria da Silva</td>
+												<td>2014</td>
+												<td>7,8</td>
+												<td>78%</td>
+												<td>Aprovado</td>
+											</tr>
+											<tr>
+												<td>Matemática</td>
+												<td>Joao da Silva</td>
+												<td>2015</td>
+												<td>7,8</td>
+												<td>78%</td>
+												<td>Aprovado</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="app-footer">
+		<div class="wrapper">
+			<span class="pull-right">2.0 <a href=""><i
+					class="fa fa-long-arrow-up"></i></a></span> © 2015 Copyright.
+		</div>
+	</footer>
+	<div>
+		<!-- Javascript Libs -->
+		<script type="text/javascript"
+			src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript"
+			src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript"
+			src="../bower_components/chartjs/Chart.min.js"></script>
+		<script type="text/javascript"
+			src="../bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+		<script type="text/javascript"
+			src="../bower_components/iCheck/icheck.min.js"></script>
+		<script type="text/javascript"
+			src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+		<script type="text/javascript"
+			src="../bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript"
+			src="../bower_components/select2/dist/js/select2.full.min.js"></script>
+		<script type="text/javascript"
+			src="../vendor/js/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="../vendor/js/ace/ace.js"></script>
+		<script type="text/javascript" src="../vendor/js/ace/mode-html.js"></script>
+		<script type="text/javascript" src="../vendor/js/ace/theme-github.js"></script>
+		<!-- Javascript -->
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript" src="../js/chartjs.js"></script>
+</body>
+
+</html>
