@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flat Admin V.2 - Free Bootstrap Admin Templates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <!-- CSS Libs -->
+  <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/animate.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/iCheck/skins/flat/_all.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/DataTables/media/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="../vendor/css/dataTables.bootstrap.css">
+  <!-- CSS App -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/themes.css">
+</head>
+
+<body class="flat-orange">
+  <div class="app-container">
+    <div class="row content-container">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-expand-toggle">
+              <i class="fa fa-bars icon"></i>
+            </button>
+            <ol class="breadcrumb navbar-breadcrumb">
+              <li class="active">Bem vindo, { USUÁRIO }</li>
+            </ol>
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+              <i class="fa fa-th icon"></i>
+            </button>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+              <i class="fa fa-times icon"></i>
+            </button>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o"></i></a>
+              <ul class="dropdown-menu animated fadeInDown">
+                <li class="title">
+                  Notification
+                  <span class="badge pull-right">0</span>
+                </li>
+                <li class="message">
+                  No new notification
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown profile">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bart Simpson <span class="caret"></span></a>
+              <ul class="dropdown-menu animated fadeInDown">
+                <li>
+                  <div class="profile-info">
+                    <h4 class="username">Bart Simpson</h4>
+                    <p>bart@simpson.com</p>
+                    <div class="btn-group margin-bottom-2x" role="group">
+                      <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Sair</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="side-menu">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="side-menu-container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <div class="icon fa fa-graduation-cap"></div>
+                <div class="title">Simple School Admin</div>
+              </a>
+              <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                <i class="fa fa-times icon"></i>
+              </button>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="index.html">
+                  <span class="icon fa fa-tachometer"></span>
+                  <span class="title">Home</span>
+                </a>
+              </li>
+              <li class="panel panel-default dropdown">
+                <a data-toggle="collapse" href="#dropdown-user">
+                  <span class="icon fa fa-user"></span>
+                  <span class="title">Usuários</span>
+                </a>
+                <div id="dropdown-user" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Gerenciar Alunos</a>
+                      </li>
+                      <li><a href="#">Gerenciar Funcionários</a>
+                      </li>
+                      <li><a href="#">Novo Usuário</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="panel panel-default dropdown">
+                <a data-toggle="collapse" href="#dropdown-pedag">
+                  <span class="icon fa fa-university"></span>
+                  <span class="title">Pedagógico</span>
+                </a>
+                <div id="dropdown-pedag" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Gerenciar Turmas</a>
+                      </li>
+                      <li><a href="#">Gerenciar Disciplinas</a>
+                      </li>
+                      <li><a href="#">Gerenciar Horários</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="panel panel-default dropdown">
+                <a data-toggle="collapse" href="#dropdown-admin">
+                  <span class="icon fa fa-suitcase"></span>
+                  <span class="title">Administrativo</span>
+                </a>
+                <div id="dropdown-admin" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">Gerenciar Eventos</a>
+                      </li>
+                      <li><a href="#">Calendário Acadêmico</a>
+                      </li>
+                      <li><a href="#">Gráficos e Estatísticas</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Main Content -->
+      <div class="container-fluid">
+        <div class="side-body padding-top">
+          <div class="row">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <div class="title">Informações Funcionário</div>
+                </div>
+                <div class="pull-right card-action">
+                  <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalCardProfileExample"><i class="fa fa-code"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row no-margin no-gap">
+                  <form class="" action="index.html" method="post">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="row">
+                        <div class="form-group">
+                          <label for="name">Nome:</label>
+                          <input type="text" class="form-control" id="name" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="birthdate">Data de Nascimento:</label>
+                          <input type="date" class="form-control" id="birthdate" placeholder="" required>
+                        </div>
+                        <div class="row no-margin-bottom">
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                              <label for="rg">RG:</label>
+                              <input type="text" class="form-control" id="rg" placeholder="" required>
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                              <label for="cpf">CPF:</label>
+                              <input type="text" class="form-control" id="cpf" placeholder="" required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row no-margin-bottom">
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                              <label for="phone">Telefone:</label>
+                              <input type="text" class="form-control" id="phone" placeholder="">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                              <label for="cellphone">Celular:</label>
+                              <input type="text" class="form-control" id="cellphone" placeholder="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row no-margin-bottom">
+                          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="form-group">
+                              <label for="email">E-Mail:</label>
+                              <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="form-group">
+                              <label for="salary">Remuneração:</label>
+                              <input type="number" class="form-control" id="salary"
+                                     pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="form-group">
+                              <label for="class">Cargo:</label>
+                              <select class="form-control" id="class">
+                                <option value="1">Professor</option>
+                                <option value="2">Secretário</option>
+                                <option value="3">Segurança</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row no-margin-bottom">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">
+                  <div class="title">Informações Administrativas</div>
+                </div>
+                <div class="pull-right card-action">
+                  <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalCardProfileExample"><i class="fa fa-code"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row no-margin no-gap">
+                  <div class="sub-title">Turmas e Disciplinas ( Mostrado apenas se for professor )</div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Turma</th>
+                        <th>Disciplina</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="success">
+                        <th scope="row">1</th>
+                        <td>1º Ano C</td>
+                        <td>Física</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                <div class="row no-margin no-gap">
+                  <div class="sub-title">Histórico de Ações</div>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="success">
+                        <th scope="row">1</th>
+                        <td>18/05/2015 08:30</td>
+                        <td>Admissão</td>
+                        <td>Contratado como Professor de Biologia</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="app-footer">
+        <div class="wrapper">
+          <span class="pull-right">2.0 <a href=""><i class="fa fa-long-arrow-up"></i></a></span> © 2015 Copyright.
+        </div>
+      </footer>
+      <div>
+        <!-- Javascript Libs -->
+        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../bower_components/chartjs/Chart.min.js"></script>
+        <script type="text/javascript" src="../bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+        <script type="text/javascript" src="../bower_components/iCheck/icheck.min.js"></script>
+        <script type="text/javascript" src="../bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript" src="../bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../bower_components/select2/dist/js/select2.full.min.js"></script>
+        <script type="text/javascript" src="../vendor/js/dataTables.bootstrap.js"></script>
+        <script type="text/javascript" src="../vendor/js/ace/ace.js"></script>
+        <script type="text/javascript" src="../vendor/js/ace/mode-html.js"></script>
+        <script type="text/javascript" src="../vendor/js/ace/theme-github.js"></script>
+        <!-- Javascript -->
+        <script type="text/javascript" src="../js/app.js"></script>
+        <script type="text/javascript" src="../js/chartjs.js"></script>
+</body>
+
+</html>
