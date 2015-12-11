@@ -1,3 +1,4 @@
+<!-- Tela para professor cadastrar atividades - perspectiva Professor -->
 <!DOCTYPE html>
 <html>
 
@@ -188,7 +189,7 @@
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
 											<li><a href="novaatividade.html">Cadastrar atividade</a></li>
-											<li><a href="atividades.html">Gerenciar atividades</a></li>
+											<li><a href="ativprofessor.html">Gerenciar atividades</a></li>
 											</ul>
 									</div>
 								</div></li>
@@ -214,26 +215,32 @@
 						<div class="col-xs-9">
                             <div class="card">
                                 <div class="card-header"><div class="card-title">
-                                    <div class="title">Nova Avaliação</div>
+                                    <div class="title">Cadastrar Frequência</div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-									<!--<div class="sub-title"></div>-->
+									Data da aula: <input type="date" class="form-control" placeholder="">
+									<br>
 									Disciplina: <input type="text" class="form-control" placeholder="Disciplina">
 									<br>
-									Número da avaliação: <input type="text" class="form-control" placeholder="1ª, 2ª, 3ª avaliação do bimestre">
+									Aluno: <input type="text" class="form-control" placeholder="">
 									<br>
-									<!-- <div class="sub-title">Conteúdo da avaliação</div> -->
-									<textarea class="form-control" rows="3" placeholder="Conteúdo da avaliação"></textarea>
+									Presente?
+									<div class="radio3">
+                                          <input type="radio" id="radio1" name="radio1" value="option1">
+                                          <label for="radio1">SIM</label>
+                                        </div>
+                                        <div class="radio3">
+                                          <input type="radio" id="radio2" name="radio1" value="option2">
+                                          <label for="radio2">NÃO</label>
+                                        </div>
 									<br>
 									<button type="button" class="btn btn-default"><a href="indexProfessor.html">Cancelar</a></button>
 									<button type="button" class="btn btn-success">Confirmar</button>
                                     </div>
                                 </div>
                             </div>
-						
-						
-					</div>
+						</div>
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,4 @@
+<!-- Tela de atividades cadastradas para professor - perspectiva Professor -->
 <!DOCTYPE html>
 <html>
 
@@ -188,7 +189,7 @@
 									<div class="panel-body">
 										<ul class="nav navbar-nav">
 											<li><a href="novaatividade.html">Cadastrar atividade</a></li>
-											<li><a href="atividades.html">Gerenciar atividades</a></li>
+											<li><a href="ativprofessor.html">Gerenciar atividades</a></li>
 											</ul>
 									</div>
 								</div></li>
@@ -208,32 +209,42 @@
 				</nav>
 			</div>
 			<!-- Main Content -->
-			<div class="container-fluid">
-				<div class="side-body padding-top">
-					<div class="row">
-						<div class="col-xs-9">
-                            <div class="card">
-                                <div class="card-header"><div class="card-title">
-                                    <div class="title">Nova Avaliação</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-									<!--<div class="sub-title"></div>-->
-									Disciplina: <input type="text" class="form-control" placeholder="Disciplina">
-									<br>
-									Número da avaliação: <input type="text" class="form-control" placeholder="1ª, 2ª, 3ª avaliação do bimestre">
-									<br>
-									<!-- <div class="sub-title">Conteúdo da avaliação</div> -->
-									<textarea class="form-control" rows="3" placeholder="Conteúdo da avaliação"></textarea>
-									<br>
-									<button type="button" class="btn btn-default"><a href="indexProfessor.html">Cancelar</a></button>
-									<button type="button" class="btn btn-success">Confirmar</button>
-                                    </div>
-                                </div>
-                            </div>
-						
-						
-					</div>
+				<div class="container-fluid">
+        <div class="side-body">
+          <div class="page-title">
+            <span class="title">Avaliações</span>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <table id="ativprofessor" class="datatable table table-striped" cellspacing="0" width="100%">
+                    <thead>
+                      <tr>
+                        <th>Disciplina</th>
+                        <th>Número</th>
+                        <th>Data</th>
+                        <th>Aluno</th>
+                        <th>Nota</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Matemática</td>
+                        <td>3</td>
+                        <td>17/11/2015</td>
+                        <td>Fulano da Silva</td>
+                        <td>8.3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button type="button" class="btn btn-primary"><a href="indexprofessor.html">Voltar</button></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 				</div>
 			</div>
 		</div>
