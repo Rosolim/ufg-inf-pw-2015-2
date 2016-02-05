@@ -1,0 +1,20 @@
+CRUD MODEL (Ygor)
+1. Aluno
+2. Professor
+3. Disciplina
+4. Turma
+5. Atividades
+
+Aluno (Aluno)
+1. Consultar nota
+2. Consultar Atividades
+
+Professor (Professor)
+1. Cadastra atividades
+2. Lista turmas
+
+Administrador (Ygor)
+1. Criar Aluno
+2. Criar Professor
+3. Criar Turma
+4. Criar Disciplina
