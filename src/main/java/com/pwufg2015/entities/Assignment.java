@@ -2,6 +2,8 @@ package com.pwufg2015.entities;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Assignments")
@@ -11,8 +13,19 @@ public class Assignment {
     private String type;
     private Date createDate;
     private Date dueDate;
+    
+    private TermCourses term;
+   
+    @ManyToOne
+    public TermCourses getTerm() {
+		return term;
+	}
 
-    @Id
+	public void setTerm(TermCourses term) {
+		this.term = term;
+	}
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ASSIGNMENT_ID")
     public Long getAssignmentId() {

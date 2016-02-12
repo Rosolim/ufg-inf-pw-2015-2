@@ -39,22 +39,6 @@ public class TermCourses {
     }
 
     private TermCoursesId pk = new TermCoursesId();
-    private Set<Assignment> assignments = new HashSet<>(0);
-
-    @OneToMany(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-    @JoinTable(
-            name = "Course_Assignments",
-            joinColumns = {@JoinColumn(name = "term_id"),
-                           @JoinColumn(name = "course_id")},
-            inverseJoinColumns = @JoinColumn(name = "assignment_id")
-    )
-    public Set<Assignment> getAssignments() {
-        return assignments;
-    }
-
-    public void setAssignments(Set<Assignment> assignments) {
-        this.assignments = assignments;
-    }
 
     @EmbeddedId
     public TermCoursesId getPk() {
