@@ -2,37 +2,49 @@ package com.pwufg2015.entities;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Students")
-@PrimaryKeyJoinColumn(name="PERSON_ID")
+@PrimaryKeyJoinColumn(name = "PERSON_ID")
 public class Student extends Person {
 
-    private String status;
-    private Date admittanceDate;
-    private Date endingDate;
+	private String status;
+	private Date admittanceDate;
+	private Date endingDate;
+	private Set<StudentAssignment> studentAssignment = new HashSet<>(0);
 
-    public String getStatus() {
-        return status;
-    }
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.student", cascade = CascadeType.ALL)
+	public Set<StudentAssignment> getStudentAssignment() {
+		return studentAssignment;
+	}
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+	public void setStudentAssignment(Set<StudentAssignment> studentAssignment) {
+		this.studentAssignment = studentAssignment;
+	}
 
-    public Date getAdmittanceDate() {
-        return admittanceDate;
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public void setAdmittanceDate(Date admittanceDate) {
-        this.admittanceDate = admittanceDate;
-    }
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
-    public Date getEndingDate() {
-        return endingDate;
-    }
+	public Date getAdmittanceDate() {
+		return admittanceDate;
+	}
 
-    public void setEndingDate(Date endingDate) {
-        this.endingDate = endingDate;
-    }
+	public void setAdmittanceDate(Date admittanceDate) {
+		this.admittanceDate = admittanceDate;
+	}
+
+	public Date getEndingDate() {
+		return endingDate;
+	}
+
+	public void setEndingDate(Date endingDate) {
+		this.endingDate = endingDate;
+	}
 }

@@ -13,8 +13,18 @@ public class Assignment {
     private String type;
     private Date createDate;
     private Date dueDate;
+    private Set<StudentAssignment> studentAssignment = new HashSet<>(0);
     
-    private TermCourses term;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.assignment", cascade=CascadeType.ALL)
+    public Set<StudentAssignment> getStudentAssignment() {
+		return studentAssignment;
+	}
+
+	public void setStudentAssignment(Set<StudentAssignment> studentAssignment) {
+		this.studentAssignment = studentAssignment;
+	}
+
+	private TermCourses term;
    
     @ManyToOne
     public TermCourses getTerm() {

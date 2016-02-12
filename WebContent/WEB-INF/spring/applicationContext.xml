@@ -57,6 +57,7 @@
                 <value>com.pwufg2015.entities.Course</value>
                 <value>com.pwufg2015.entities.Term</value>
                 <value>com.pwufg2015.entities.TermCourses</value>
+                <value>com.pwufg2015.entities.StudentAssignment</value>
             </list>
         </property>
         <property name="hibernateProperties">
