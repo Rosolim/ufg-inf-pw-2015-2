@@ -11,7 +11,7 @@ public class Course {
     private Long courseId;
     private String courseName;
     private Set<TermCourses> termCourses = new HashSet<>(0);
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "COURSE_ID")
@@ -27,11 +27,13 @@ public class Course {
     public Set<TermCourses> getTermCourses() {
         return termCourses;
     }
-
+     
     public void setTermCourses(Set<TermCourses> termCourses) {
         this.termCourses = termCourses;
     }
-
+ 
+    
+    
     public String getCourseName() {
         return courseName;
     }

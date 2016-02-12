@@ -39,7 +39,8 @@ public class TermCourses {
     }
 
     private TermCoursesId pk = new TermCoursesId();
-
+    private Teacher teacher;
+    
     @EmbeddedId
     public TermCoursesId getPk() {
         return pk;
@@ -65,5 +66,13 @@ public class TermCourses {
 
     public void setTerm(Term term){
         getPk().setTerm(term);
+    }
+    
+    @OneToOne(fetch = FetchType.LAZY)
+    public Teacher getTeacher(){
+    	return teacher;
+    }
+    public void setTeacher(Teacher t){
+    	this.teacher = t;
     }
 }
