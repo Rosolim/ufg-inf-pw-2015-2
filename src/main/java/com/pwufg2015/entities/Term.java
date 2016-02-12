@@ -1,7 +1,7 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,8 +11,8 @@ public class Term {
 
     private Long termId;
     private String termName;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private Date startDate;
+    private Date endDate;
 
     private Set<TermCourses> termCourses = new HashSet<>(0);
 
@@ -45,19 +45,19 @@ public class Term {
         this.termName = termName;
     }
 
-    public LocalDate getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 }

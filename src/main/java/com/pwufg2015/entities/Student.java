@@ -1,7 +1,7 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "Students")
@@ -9,8 +9,8 @@ import java.time.LocalDate;
 public class Student extends Person {
 
     private String status;
-    private LocalDate admittanceDate;
-    private LocalDate endingDate;
+    private Date admittanceDate;
+    private Date endingDate;
 
     public String getStatus() {
         return status;
@@ -20,19 +20,19 @@ public class Student extends Person {
         this.status = status;
     }
 
-    public LocalDate getAdmittanceDate() {
+    public Date getAdmittanceDate() {
         return admittanceDate;
     }
 
-    public void setAdmittanceDate(LocalDate admittanceDate) {
+    public void setAdmittanceDate(Date admittanceDate) {
         this.admittanceDate = admittanceDate;
     }
 
-    public LocalDate getEndingDate() {
+    public Date getEndingDate() {
         return endingDate;
     }
 
-    public void setEndingDate(LocalDate endingDate) {
+    public void setEndingDate(Date endingDate) {
         this.endingDate = endingDate;
     }
 }

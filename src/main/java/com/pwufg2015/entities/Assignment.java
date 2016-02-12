@@ -1,8 +1,7 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "Assignments")
@@ -10,8 +9,8 @@ public class Assignment {
 
     private Long assignmentId;
     private String type;
-    private LocalDateTime createDate;
-    private LocalDateTime dueDate;
+    private Date createDate;
+    private Date dueDate;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,19 +31,19 @@ public class Assignment {
         this.type = type;
     }
 
-    public LocalDateTime getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(LocalDateTime createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
-    public LocalDateTime getDueDate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(LocalDateTime dueDate) {
+    public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
 }
