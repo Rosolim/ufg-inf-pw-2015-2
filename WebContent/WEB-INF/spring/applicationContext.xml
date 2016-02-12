@@ -22,7 +22,7 @@
     <context:annotation-config/>
     <context:component-scan base-package="com"/>
 
-    <!-- Pool declaration 
+    <!-- Pool declaration -->
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <property name="poolName" value="springHikariCP"/>
         <property name="connectionTestQuery" value="SELECT 1"/>
@@ -37,19 +37,26 @@
                 <prop key="password">${jdbc.password}</prop>
             </props>
         </property>
-    </bean> -->
+    </bean>
 
-    <!-- HikariCP configuration
+    <!-- HikariCP configuration -->
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
         <constructor-arg ref="hikariConfig"/>
-    </bean> -->
+    </bean>
 
-    <!-- Session Factory Declaration 
+    <!-- Session Factory Declaration -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>com.entities.Example</value>
+                <value>com.pwufg2015.entities.Person</value>
+                <value>com.pwufg2015.entities.Student</value>
+                <value>com.pwufg2015.entities.Teacher</value>
+                <value>com.pwufg2015.entities.User</value>
+                <value>com.pwufg2015.entities.Assignment</value>
+                <value>com.pwufg2015.entities.Course</value>
+                <value>com.pwufg2015.entities.Term</value>
+                <value>com.pwufg2015.entities.TermCourses</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -59,14 +66,14 @@
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
         </property>
-    </bean> -->
+    </bean>
 
-    <!-- Transaction Based on Annotations
-    <tx:annotation-driven transaction-manager="txManager"/> -->
+    <!-- Transaction Based on Annotations -->
+    <tx:annotation-driven transaction-manager="txManager"/>
 
-    <!-- Transaction Manager 
+    <!-- Transaction Manager -->
     <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
-    </bean> -->
+    </bean>
 
 </beans>
