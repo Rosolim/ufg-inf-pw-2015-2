@@ -1,10 +1,11 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "Users")
-public class User {
+public class User implements Serializable {
 
     private Long userId;
     private String userName;

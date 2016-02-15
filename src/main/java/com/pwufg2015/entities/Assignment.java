@@ -1,13 +1,14 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "Assignments")
-public class Assignment {
+public class Assignment implements Serializable {
 
     private Long assignmentId;
     private String type;

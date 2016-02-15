@@ -3,13 +3,14 @@ package com.pwufg2015.entities;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
 @Table(name = "Teachers")
 @PrimaryKeyJoinColumn(name="PERSON_ID")
-public class Teacher extends Person {
+public class Teacher extends Person implements Serializable {
 
     private String status;
     private Date admittanceDate;

@@ -1,12 +1,13 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "Courses")
-public class Course {
+public class Course implements Serializable {
 
     private Long courseId;
     private String courseName;

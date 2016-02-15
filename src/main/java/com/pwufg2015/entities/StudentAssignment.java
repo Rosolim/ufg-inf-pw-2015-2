@@ -1,5 +1,6 @@
 package com.pwufg2015.entities;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.AssociationOverride;
@@ -19,9 +20,10 @@ import com.pwufg2015.entities.TermCourses.TermCoursesId;
 @Table(name = "StudentAssignment")
 @AssociationOverrides({ @AssociationOverride(name = "pk.student", joinColumns = @JoinColumn(name = "PERSON_ID") ),
 		@AssociationOverride(name = "pk.assignment", joinColumns = @JoinColumn(name = "ASSIGNMENT_ID") ) })
-public class StudentAssignment {
+public class StudentAssignment implements Serializable {
+
 	@Embeddable
-	public class StudentAssignmentId implements java.io.Serializable {
+	public class StudentAssignmentId implements Serializable {
 
 		private Student student;
 		private Assignment assignment;

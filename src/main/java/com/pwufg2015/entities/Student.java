@@ -1,6 +1,7 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +9,7 @@ import java.util.Set;
 @Entity
 @Table(name = "Students")
 @PrimaryKeyJoinColumn(name = "PERSON_ID")
-public class Student extends Person {
+public class Student extends Person implements Serializable {
 
 	private String status;
 	private Date admittanceDate;

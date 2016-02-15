@@ -1,6 +1,7 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,7 +12,7 @@ import java.util.Set;
                 joinColumns = @JoinColumn(name = "TERM_ID")),
         @AssociationOverride(name = "pk.course",
                 joinColumns = @JoinColumn(name = "COURSE_ID")) })
-public class TermCourses {
+public class TermCourses implements Serializable {
 
     @Embeddable
     public class TermCoursesId implements java.io.Serializable {

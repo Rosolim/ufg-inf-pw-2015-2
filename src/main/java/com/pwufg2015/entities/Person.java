@@ -2,12 +2,13 @@ package com.pwufg2015.entities;
 
 import javax.persistence.*;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "People")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Person {
+public class Person implements Serializable {
 
 	private Long personId;
 	private String name;
