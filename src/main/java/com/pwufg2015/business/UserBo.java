@@ -22,5 +22,8 @@ public class UserBo implements IUserBo {
         return null;
     }
 
-
+    @Override
+    public User getByLogin(String login) {
+        return userDao.getByLogin(login);
+    }
 }

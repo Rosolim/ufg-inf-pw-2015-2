@@ -53,11 +53,13 @@
                 <value>com.pwufg2015.entities.Student</value>
                 <value>com.pwufg2015.entities.Teacher</value>
                 <value>com.pwufg2015.entities.User</value>
+                <value>com.pwufg2015.entities.Role</value>
                 <value>com.pwufg2015.entities.Assignment</value>
                 <value>com.pwufg2015.entities.Course</value>
                 <value>com.pwufg2015.entities.Term</value>
                 <value>com.pwufg2015.entities.TermCourses</value>
                 <value>com.pwufg2015.entities.StudentAssignment</value>
+
             </list>
         </property>
         <property name="hibernateProperties">

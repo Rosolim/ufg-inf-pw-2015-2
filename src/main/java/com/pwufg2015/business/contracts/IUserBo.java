@@ -10,4 +10,6 @@ public interface IUserBo extends BusinessContract<User> {
     @Override
     User retrieveObject(long id);
 
+    User getByLogin(String login);
+
 }

@@ -6,4 +6,5 @@ public interface StudentDaoContract extends GenericDaoContract<Student> {
 
 
 
+
 }

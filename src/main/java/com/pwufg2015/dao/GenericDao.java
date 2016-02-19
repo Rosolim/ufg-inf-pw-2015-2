@@ -1,6 +1,7 @@
 package com.pwufg2015.dao;
 
 import com.pwufg2015.dao.contracts.GenericDaoContract;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -19,24 +20,28 @@ public abstract class GenericDao<Entity extends Serializable> implements Generic
         this.typeEntity = typeEntity;
     }
 
+    public Session dbSession(){
+        return getSessionFactory().getCurrentSession();
+    }
+
     @Override
     public void add(Entity entity) {
-        getSessionFactory().getCurrentSession().save(entity);
+        dbSession().save(entity);
     }
 
     @Override
     public void update(Entity entity) {
-        getSessionFactory().getCurrentSession().update(entity);
+        dbSession().update(entity);
     }
 
     @Override
     public Entity get(long id) {
-        return getSessionFactory().getCurrentSession().get(typeEntity, id);
+        return dbSession().get(typeEntity, id);
     }
 
     @Override
     public void delete(Entity entity) {
-        getSessionFactory().getCurrentSession().delete(entity);
+        dbSession().delete(entity);
     }
 
     public SessionFactory getSessionFactory() {

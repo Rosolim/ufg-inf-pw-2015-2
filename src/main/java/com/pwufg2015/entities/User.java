@@ -12,6 +12,7 @@ public class User implements Serializable {
     private String password;
     private Boolean active;
     private Person user;
+    private Role role;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +23,19 @@ public class User implements Serializable {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    @OneToOne(cascade=CascadeType.ALL)
+    @JoinTable(name="USER_ROLES",
+            joinColumns = {@JoinColumn(name="USER_ID")},
+            inverseJoinColumns = {@JoinColumn(name="ROLE_ID")}
+    )
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
