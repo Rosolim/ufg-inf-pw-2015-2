@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service("TeacherService")
 @Transactional(readOnly = true)
 public class TeacherBo implements ITeacherBo {
@@ -28,13 +30,17 @@ public class TeacherBo implements ITeacherBo {
     @Override
     @Transactional(readOnly = false)
     public void updateObject(Teacher teacher) {
-
         teacherDao.update(teacher);
-
     }
 
     @Override
+    @Transactional(readOnly = false)
     public void deleteObject(Teacher teacher) {
+        teacherDao.delete(teacher);
+    }
 
+    @Override
+    public List<Teacher> listAllTeachers() {
+        return teacherDao.listAllTeachers();
     }
 }

@@ -4,6 +4,7 @@ import com.pwufg2015.bean.MB;
 import com.pwufg2015.business.contracts.ITeacherBo;
 import com.pwufg2015.entities.Teacher;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
@@ -24,11 +25,15 @@ public class ListTeacherBean extends MB {
     private Teacher teacher = new Teacher();
     private List<Teacher> teachers = new ArrayList<>();
 
+    @PostConstruct
+    public void init(){
+         teachers = teacherService.listAllTeachers();
+    }
 
     public String editTeacher() {
 
-        flashContainer().put("car", teacher);
-        return "/admin/editProfessor.xhtml";
+        flashContainer().put("teacher", model.getRowData());
+        return "/admin/editProfessor.xhtml?faces-redirect=true";
 
     }
 
@@ -36,7 +41,8 @@ public class ListTeacherBean extends MB {
 
         try {
 
-         teacherService.deleteObject(teacher);
+         teacherService.deleteObject(model.getRowData());
+         teachers.remove(model.getRowData());
 
         }catch (Exception ex){
             ex.printStackTrace();

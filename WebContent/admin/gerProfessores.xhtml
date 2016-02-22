@@ -29,6 +29,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h:form id="funcForm" prependId="false">
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                                     <h:dataTable id="funcionariotable" value="#{listTeacherBean.model}" var="t"
                                                  styleClass="datatable table table-striped">
                                         <h:column>
@@ -53,7 +54,7 @@
 
                                         <h:column>
                                             <f:facet name="header">Status</f:facet>
-                                            #{t.status}
+                                            #{t.active}
                                         </h:column>
 
                                         <h:column>
