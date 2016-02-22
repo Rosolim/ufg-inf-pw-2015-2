@@ -40,6 +40,7 @@ public class PersistTeacherBean extends MB {
     }
 
 
+
     //region Getters and Setters
     public ITeacherBo getTeacherService() {
         return teacherService;

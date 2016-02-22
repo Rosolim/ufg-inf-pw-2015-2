@@ -33,6 +33,7 @@ public class ListTeacherBean extends MB {
     public String editTeacher() {
 
         flashContainer().put("teacher", model.getRowData());
+
         return "/admin/editProfessor.xhtml?faces-redirect=true";
 
     }
@@ -50,6 +51,7 @@ public class ListTeacherBean extends MB {
 
     }
 
+    //region Getter and Setter
     public DataModel<Teacher> getModel() {
 
         if (model == null) {
@@ -87,4 +89,5 @@ public class ListTeacherBean extends MB {
     public void setTeacherService(ITeacherBo teacherService) {
         this.teacherService = teacherService;
     }
+    //endregion
 }

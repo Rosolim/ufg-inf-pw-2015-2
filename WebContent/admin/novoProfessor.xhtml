@@ -24,6 +24,7 @@
             <div class="side-body">
                 <div class="page-title">
                     <span class="title">Novo Professor</span>
+
                     <div class="description">Cadastrar Professor</div>
                 </div>
                 <div class="row">
@@ -33,94 +34,97 @@
                                 <h:form id="newFuncForm" prependId="false">
                                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <label for="name">Nome:</label>
-                                                <h:inputText id="name" value="#{persistTeacherBean.teacher.name}"
-                                                             styleClass="form-control"
-                                                             pt:type="text"
-                                                             required="true"
-                                                             requiredMessage="Digite o nome do funcionário"/>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="birthdate">Data de Nascimento:</label>
-                                                <h:inputText id="birthdate"
-                                                             value="#{persistTeacherBean.teacher.birthDate}"
-                                                             styleClass="form-control"
-                                                             pt:type="date"
-                                                             required="true"
-                                                             requiredMessage="Digite a data de nascimento">
-                                                    <f:convertDateTime pattern="yyyy-MM-dd" />
-                                                </h:inputText>
-                                            </div>
-                                            <div class="row no-margin-bottom">
-                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="rg">RG:</label>
-                                                        <h:inputText id="rg"
-                                                                     value="#{persistTeacherBean.teacher.idNumber}"
-                                                                     styleClass="form-control"
-                                                                     pt:type="text"
-                                                                     required="true"
-                                                                     requiredMessage="Digite a identidate"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="cpf">CPF:</label>
-                                                        <h:inputText id="cpf" value="#{persistTeacherBean.teacher.cpf}"
-                                                                     styleClass="form-control"
-                                                                     pt:type="text"
-                                                                     required="true" requiredMessage="Digite o cpf"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row no-margin-bottom">
-                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="phone">Telefone:</label>
-                                                        <h:inputText id="phone"
-                                                                     value="#{persistTeacherBean.teacher.phoneNumber}"
-                                                                     styleClass="form-control"
-                                                                     pt:type="text"
-                                                                     required="true"
-                                                                     requiredMessage="Digite o telefone"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="major">Graduação:</label>
-                                                <h:inputText id="major" value="#{persistTeacherBean.teacher.major}"
-                                                             styleClass="form-control"
-                                                             pt:type="text"
-                                                             required="true"
-                                                             requiredMessage="Digite a graduação do professor"/>
-                                            </div>
-                                            <div class="row no-margin-bottom">
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="form-group">
-                                                        <label for="email">E-Mail:</label>
-                                                        <h:inputText id="email"
-                                                                     value="#{persistTeacherBean.teacher.email}"
-                                                                     styleClass="form-control"
-                                                                     pt:type="email"
-                                                                     required="true" requiredMessage="Digite o email"/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="form-group">
-                                                        <label for="salary">Remuneração:</label>
-                                                        <h:inputText id="salary"
-                                                                     value="#{persistTeacherBean.teacher.salary}"
-                                                                     styleClass="form-control"
-                                                                     pt:type="number"
-                                                                     pt:pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$"
-                                                                     required="true"
-                                                                     requiredMessage="Digite o nome do funcionário"/>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="name">Nome:</label>
+                                            <h:inputText id="name" value="#{persistTeacherBean.teacher.name}"
+                                                         styleClass="form-control"
+                                                         pt:type="text"
+                                                         required="true"
+                                                         requiredMessage="Digite o nome do funcionário"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="birthdate">Data de Nascimento:</label>
+                                            <h:inputText id="birthdate"
+                                                         value="#{persistTeacherBean.teacher.birthDate}"
+                                                         styleClass="form-control"
+                                                         pt:type="date"
+                                                         required="true"
+                                                         requiredMessage="Digite a data de nascimento">
+                                                <f:convertDateTime pattern="yyyy-MM-dd"/>
+                                            </h:inputText>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="rg">RG:</label>
+                                            <h:inputText id="rg"
+                                                         value="#{persistTeacherBean.teacher.idNumber}"
+                                                         styleClass="form-control"
+                                                         pt:type="number"
+                                                         required="true"
+                                                         requiredMessage="Digite a identidate"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="cpf">CPF:</label>
+                                            <h:inputText id="cpf" value="#{persistTeacherBean.teacher.cpf}"
+                                                         styleClass="form-control"
+                                                         pt:type="number"
+                                                         required="true" requiredMessage="Digite o cpf"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="phone">Telefone:</label>
+                                            <h:inputText id="phone"
+                                                         value="#{persistTeacherBean.teacher.phoneNumber}"
+                                                         styleClass="form-control"
+                                                         pt:type="number"
+                                                         required="true"
+                                                         requiredMessage="Digite o telefone"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <label for="email">E-Mail:</label>
+                                            <h:inputText id="email"
+                                                         value="#{persistTeacherBean.teacher.email}"
+                                                         styleClass="form-control"
+                                                         pt:type="email"
+                                                         required="true" requiredMessage="Digite o email"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                        <div class="form-group">
+                                            <label for="major">Graduação:</label>
+                                            <h:inputText id="major" value="#{persistTeacherBean.teacher.major}"
+                                                         styleClass="form-control"
+                                                         pt:type="text"
+                                                         required="true"
+                                                         requiredMessage="Digite a graduação do professor"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="salary">Remuneração:</label>
+                                            <h:inputText id="salary"
+                                                         value="#{persistTeacherBean.teacher.salary}"
+                                                         styleClass="form-control"
+                                                         pt:type="number"
+                                                         pt:pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$"
+                                                         required="true"
+                                                         requiredMessage="Digite o nome do funcionário"/>
                                         </div>
                                     </div>
 

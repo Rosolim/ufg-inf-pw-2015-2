@@ -16,7 +16,6 @@ public class EditTeacherBean extends MB {
     @ManagedProperty(name = "teacherService", value = "#{TeacherService}")
     private ITeacherBo teacherService;
 
-
     private Teacher teacher = new Teacher();
 
     @PostConstruct
@@ -26,16 +25,16 @@ public class EditTeacherBean extends MB {
 
     }
 
-    public void editTeacher(){
+    public String editTeacher(){
 
         try{
-
             teacherService.updateObject(teacher);
-
         }catch (Exception ex){
             ex.printStackTrace();
+            return "";
         }
 
+        return "/admin/gerProfessores.xhtml?faces-redirect=true";
     }
 
     //region Getters and Setters
