@@ -10,20 +10,51 @@ $(".input").focusout(function() {
 	}, 300);
 });
 
-$(".login").submit(function() {
-	$(this).find(".submit i").removeAttr('class').addClass("fa fa-check").css({
+function handleComplete(xhr,status,args){
+
+	var isValid = args.isValid;
+
+	$(".login").find(".submit i").removeAttr('class').addClass("fa fa-check").css({
 		"color" : "#fff"
 	});
-	$(".submit").css({
-		"background" : "#2ecc71",
-		"border-color" : "#2ecc71"
-	});
-	$(".feedback").show().animate({
-		"opacity" : "1",
-		"bottom" : "-80px"
-	}, 400);
-	$("input").css({
-		"border-color" : "#2ecc71"
-	});
-	return false;
-});
+
+	if(isValid){
+
+		$(".feedback").addClass("success")
+			          .show()
+			          .animate({
+			               "opacity" : "1",
+						   "bottom" : "-80px"
+		              }, 400);
+
+		$(".submit").css({
+			"background" : "#2ecc71",
+			"border-color" : "#2ecc71"
+		});
+
+		$("input").css({
+			"border-color" : "#2ecc71"
+		});
+
+
+	}else{
+
+		$(".feedback").addClass("failure")
+			.show()
+			.animate({
+				"opacity" : "1",
+				"bottom" : "-80px"
+			}, 400);
+
+		$(".submit").css({
+			"background" : "#cc1d1c",
+			"border-color" : "#cc1d1c"
+		});
+
+		$("input").css({
+			"border-color" : "#cc1d1c"
+		});
+
+	}
+
+}

@@ -4,12 +4,5 @@ import com.pwufg2015.entities.User;
 
 public interface IUserBo extends BusinessContract<User> {
 
-    @Override
-    User newObject();
-
-    @Override
-    User retrieveObject(long id);
-
-    User getByLogin(String login);
 
 }

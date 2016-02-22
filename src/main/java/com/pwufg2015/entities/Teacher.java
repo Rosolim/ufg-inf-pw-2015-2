@@ -12,11 +12,10 @@ import java.util.Date;
 @PrimaryKeyJoinColumn(name="PERSON_ID")
 public class Teacher extends Person implements Serializable {
 
-    private String status;
+    private Boolean active;
     private Date admittanceDate;
     private Date endingDate;
     private String major;
-    private String degree;
     private BigDecimal salary;
 
     public String getMajor() {
@@ -27,12 +26,12 @@ public class Teacher extends Person implements Serializable {
         this.major = major;
     }
 
-    public String getStatus() {
-        return status;
+    public Boolean getActive() {
+        return active;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public Date getAdmittanceDate() {
@@ -49,14 +48,6 @@ public class Teacher extends Person implements Serializable {
 
     public void setEndingDate(Date endingDate) {
         this.endingDate = endingDate;
-    }
-
-    public String getDegree() {
-        return degree;
-    }
-
-    public void setDegree(String degree) {
-        this.degree = degree;
     }
 
     public BigDecimal getSalary() {

@@ -1,7 +1,6 @@
 package com.pwufg2015.business;
 
 import com.pwufg2015.business.contracts.IStudentBo;
-import com.pwufg2015.dao.StudentDao;
 import com.pwufg2015.dao.contracts.StudentDaoContract;
 import com.pwufg2015.entities.Student;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +13,8 @@ public class StudentBo implements IStudentBo {
     StudentDaoContract studentDao;
 
     @Override
-    public Student newObject() {
-        return null;
+    public void newObject(Student student) {
+
     }
 
     @Override
@@ -23,4 +22,13 @@ public class StudentBo implements IStudentBo {
         return null;
     }
 
+    @Override
+    public void updateObject(Student student) {
+
+    }
+
+    @Override
+    public void deleteObject(Student student) {
+
+    }
 }

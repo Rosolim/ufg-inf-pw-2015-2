@@ -12,13 +12,24 @@ public class TermBo implements ITermBo {
     @Autowired
     TermDaoContract termDao;
 
+
     @Override
-    public Term newObject() {
-        return null;
+    public void newObject(Term term) {
+
     }
 
     @Override
     public Term retrieveObject(long id) {
         return null;
+    }
+
+    @Override
+    public void updateObject(Term term) {
+
+    }
+
+    @Override
+    public void deleteObject(Term term) {
+
     }
 }

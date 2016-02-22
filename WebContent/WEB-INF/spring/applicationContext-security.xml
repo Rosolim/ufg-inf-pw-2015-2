@@ -23,7 +23,7 @@
     <!-- Set customUserDetailsService class as the authentication Manager for Spring Security-->
     <sec:authentication-manager alias="authenticationManager">
         <sec:authentication-provider user-service-ref="AuthService">
-            <sec:password-encoder hash="plaintext"/>
+            <sec:password-encoder hash="bcrypt"/>
         </sec:authentication-provider>
     </sec:authentication-manager>
 

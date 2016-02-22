@@ -133,11 +133,18 @@ body, html {
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	background: #2ecc71;
 	padding: 10px 0;
 	font-size: 12px;
 	display: none;
 	opacity: 0;
+}
+
+.feedback.success {
+	background: #2ecc71;
+}
+
+.feedback.failure {
+	background: #cc1d1c;
 }
 
 .feedback:before {
@@ -149,6 +156,17 @@ body, html {
 	position: absolute;
 	pointer-events: none;
 	border: 10px solid rgba(46, 204, 113, 0);
-	border-bottom-color: #2ecc71;
 	margin-left: -10px;
+}
+
+.feedback.success:before {
+	border-bottom-color: #2ecc71;
+}
+
+.feedback.failure:before {
+	border-bottom-color: #cc1d1c;
+}
+
+.ui-button-icon-only .ui-icon.fa, .ui-button-text-icon-left .ui-icon.fa, .ui-button-text-icon-right .ui-icon.fa {
+	margin-top: -12px !important;
 }

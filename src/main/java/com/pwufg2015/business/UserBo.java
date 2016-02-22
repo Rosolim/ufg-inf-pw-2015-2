@@ -13,8 +13,8 @@ public class UserBo implements IUserBo {
     UserDaoContract userDao;
 
     @Override
-    public User newObject() {
-        return null;
+    public void newObject(User user) {
+
     }
 
     @Override
@@ -23,7 +23,12 @@ public class UserBo implements IUserBo {
     }
 
     @Override
-    public User getByLogin(String login) {
-        return userDao.getByLogin(login);
+    public void updateObject(User user) {
+
+    }
+
+    @Override
+    public void deleteObject(User user) {
+
     }
 }

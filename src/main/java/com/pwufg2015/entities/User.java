@@ -8,9 +8,9 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     private Long userId;
-    private String userName;
-    private String password;
-    private Boolean active;
+    private String userName = "";
+    private String password = "";
+    private Boolean active = false;
     private Person user;
     private Role role;
 
@@ -26,7 +26,7 @@ public class User implements Serializable {
     }
 
     @OneToOne(cascade=CascadeType.ALL)
-    @JoinTable(name="USER_ROLES",
+    @JoinTable(name="User_Roles",
             joinColumns = {@JoinColumn(name="USER_ID")},
             inverseJoinColumns = {@JoinColumn(name="ROLE_ID")}
     )
@@ -38,7 +38,7 @@ public class User implements Serializable {
         this.role = role;
     }
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
     public Person getUser() {
         return user;
     }
@@ -47,6 +47,7 @@ public class User implements Serializable {
         this.user = user;
     }
 
+    @Column(nullable = false)
     public String getUserName() {
         return userName;
     }
@@ -55,6 +56,7 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
+    @Column(nullable = false)
     public String getPassword() {
         return password;
     }
@@ -63,6 +65,7 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    @Column(nullable = false)
     public Boolean getActive() {
         return active;
     }

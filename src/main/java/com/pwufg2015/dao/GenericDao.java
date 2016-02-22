@@ -5,10 +5,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 
 @Repository
+@Transactional
 public abstract class GenericDao<Entity extends Serializable> implements GenericDaoContract<Entity> {
 
     private final Class<Entity> typeEntity;
@@ -35,6 +37,7 @@ public abstract class GenericDao<Entity extends Serializable> implements Generic
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Entity get(long id) {
         return dbSession().get(typeEntity, id);
     }

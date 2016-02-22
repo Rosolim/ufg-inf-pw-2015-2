@@ -1,7 +1,6 @@
 package com.pwufg2015.entities;
 
 import javax.persistence.*;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,11 +11,11 @@ public class Person implements Serializable {
 
 	private Long personId;
 	private String name;
-	private String surname;
 	private Date birthDate;
 	private String idNumber;
 	private String cpf;
 	private String phoneNumber;
+	private String email;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,14 +34,6 @@ public class Person implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getSurname() {
-		return surname;
-	}
-
-	public void setSurname(String surname) {
-		this.surname = surname;
 	}
 
 	public Date getBirthDate() {
@@ -77,4 +68,11 @@ public class Person implements Serializable {
 		this.phoneNumber = phoneNumber;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 }

@@ -1,15 +1,17 @@
 package com.pwufg2015.bean;
 
-import com.pwufg2015.business.contracts.IAuthBo;
+import org.primefaces.context.RequestContext;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
 
 @RequestScoped
 @ManagedBean(name = "authBean")
@@ -19,18 +21,29 @@ public class AuthenticationBean {
     private String password = null;
 
     @ManagedProperty(value="#{authenticationManager}")
-    private AuthenticationManager authenticationManager = null;
+    private AuthenticationManager authenticationManager;
 
     public String login() {
+
+        RequestContext context = RequestContext.getCurrentInstance();
+
         try {
-            Authentication request = new UsernamePasswordAuthenticationToken(this.getUserName(), this.getPassword());
+            Authentication request = new UsernamePasswordAuthenticationToken(getUserName(), getPassword());
             Authentication result = authenticationManager.authenticate(request);
             SecurityContextHolder.getContext().setAuthentication(result);
         } catch (AuthenticationException e) {
-            e.printStackTrace();
-            return "incorrect";
+
+            context.addCallbackParam("isValid", false);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro de Autenticação: ", "Usuário Inválido"));
+
+            return "loginFailure";
         }
-        return "correct";
+
+        context.addCallbackParam("isValid", true);
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Autenticado: ", "Logando..."));
+
+        return "loginSuccess";
+
     }
 
     public String cancel() {

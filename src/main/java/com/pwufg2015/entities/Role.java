@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Set;
 
 @Entity
-@Table(name="ROLES")
+@Table(name="Roles")
 public class Role implements Serializable {
 
     @Id
@@ -16,7 +16,7 @@ public class Role implements Serializable {
     private String role;
 
     @OneToMany(cascade=CascadeType.ALL)
-    @JoinTable(name="USER_ROLES",
+    @JoinTable(name="User_Roles",
             joinColumns = {@JoinColumn(name="ROLE_ID")},
             inverseJoinColumns = {@JoinColumn(name="USER_ID")}
     )
