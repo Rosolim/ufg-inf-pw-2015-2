@@ -16,7 +16,7 @@ public class Term implements Serializable {
     private Date endDate;
 
     private Set<TermCourses> termCourses = new HashSet<>(0);
-
+    private Set<Student> termStudents = new HashSet<>(0);
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +28,15 @@ public class Term implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.term", cascade=CascadeType.ALL)
     public Set<TermCourses> getTermCourses() {
         return termCourses;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    public Set<Student> getTermStudents() {
+        return termStudents;
+    }
+
+    public void setTermStudents(Set<Student> termStudents) {
+        this.termStudents = termStudents;
     }
 
     public void setTermCourses(Set<TermCourses> termCourses) {

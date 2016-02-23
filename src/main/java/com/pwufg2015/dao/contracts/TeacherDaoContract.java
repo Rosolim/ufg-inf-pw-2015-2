@@ -6,6 +6,5 @@ import java.util.List;
 
 public interface TeacherDaoContract extends GenericDaoContract<Teacher> {
 
-    List<Teacher> listAllTeachers();
 
 }

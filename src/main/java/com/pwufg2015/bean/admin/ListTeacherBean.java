@@ -27,7 +27,7 @@ public class ListTeacherBean extends MB {
 
     @PostConstruct
     public void init(){
-         teachers = teacherService.listAllTeachers();
+         teachers = teacherService.listAll();
     }
 
     public String editTeacher() {

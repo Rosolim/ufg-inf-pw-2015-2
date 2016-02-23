@@ -8,20 +8,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-@SuppressWarnings("unchecked")
 public class TeacherDao extends GenericDao<Teacher> implements TeacherDaoContract {
 
     protected TeacherDao() {
         super(Teacher.class);
-    }
-
-    @Override
-    public List<Teacher> listAllTeachers() {
-
-        Criteria criteria = dbSession().createCriteria(Teacher.class);
-
-        return (List<Teacher>)criteria.list();
-
     }
 
 

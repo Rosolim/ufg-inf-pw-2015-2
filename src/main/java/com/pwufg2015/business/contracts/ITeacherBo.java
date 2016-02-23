@@ -6,6 +6,4 @@ import java.util.List;
 
 public interface ITeacherBo extends BusinessContract<Teacher> {
 
-    List<Teacher> listAllTeachers();
-
 }

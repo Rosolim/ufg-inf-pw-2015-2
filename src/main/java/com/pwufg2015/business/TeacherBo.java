@@ -40,7 +40,7 @@ public class TeacherBo implements ITeacherBo {
     }
 
     @Override
-    public List<Teacher> listAllTeachers() {
-        return teacherDao.listAllTeachers();
+    public List<Teacher> listAll() {
+        return teacherDao.listAll();
     }
 }

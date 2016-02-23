@@ -38,6 +38,14 @@
 
 	<dependencies>
 
+		<!-- Tuple Support for Java ( 3rdparty REALLY?) -->
+		<dependency>
+			<groupId>org.javatuples</groupId>
+			<artifactId>javatuples</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+
 		<!-- Java Dependency Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
