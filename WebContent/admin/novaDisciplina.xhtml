@@ -45,10 +45,12 @@
                                         </div>
                                     </div>
 
+                                    <div class="row">
+                                        <h:commandButton
+                                                id="novoFunc" styleClass="btn btn-primary" value="Cadastrar Disciplina"
+                                                action="#{persistCourseBean.persistNewCourse}"/>
+                                    </div>
 
-                                    <h:commandButton
-                                            id="novoFunc" styleClass="btn btn-primary" value="Cadastrar Funcionário"
-                                            action="#{persistCourseBean.persistNewCourse}"/>
                                 </h:form>
                                 <h:button outcome="/admin/gerDisciplinas.xhtml?faces-redirect=true"
                                           id="btnBack" type="button" styleClass="btn btn-primary" value="Voltar"/>

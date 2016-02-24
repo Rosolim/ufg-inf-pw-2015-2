@@ -6,6 +6,8 @@ import com.pwufg2015.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("UserService")
 public class UserBo implements IUserBo {
 
@@ -30,5 +32,10 @@ public class UserBo implements IUserBo {
     @Override
     public void deleteObject(User user) {
 
+    }
+
+    @Override
+    public List<User> listAll() {
+        return null;
     }
 }

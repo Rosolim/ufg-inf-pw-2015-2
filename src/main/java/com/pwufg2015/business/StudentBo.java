@@ -6,6 +6,8 @@ import com.pwufg2015.entities.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("StudentService")
 public class StudentBo implements IStudentBo {
 
@@ -30,5 +32,10 @@ public class StudentBo implements IStudentBo {
     @Override
     public void deleteObject(Student student) {
 
+    }
+
+    @Override
+    public List<Student> listAll() {
+        return null;
     }
 }

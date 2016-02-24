@@ -2,6 +2,8 @@ package com.pwufg2015.bean.admin;
 
 
 import com.pwufg2015.bean.MB;
+import com.pwufg2015.business.contracts.ICourseBo;
+import com.pwufg2015.business.contracts.ITeacherBo;
 import com.pwufg2015.business.contracts.ITermBo;
 import com.pwufg2015.entities.Course;
 import com.pwufg2015.entities.Teacher;
@@ -20,6 +22,13 @@ public class PersistTermBean extends MB {
     @ManagedProperty(name = "termService", value = "#{TermService}")
     private ITermBo termService;
 
+    @ManagedProperty(name = "teacherService", value = "#{TeacherService}")
+    private ITeacherBo teacherService;
+
+    @ManagedProperty(name = "courseService", value = "#{CourseService}")
+    private ICourseBo courseService;
+
+
     private Term term = new Term();
     private List<Pair<Course,Teacher>> courseList = new ArrayList<>();
 
@@ -27,7 +36,7 @@ public class PersistTermBean extends MB {
 
         try {
 
-            termService.newObject(term);
+            termService.newObject(term,courseList);
 
         }catch (Exception ex){
 
@@ -38,11 +47,26 @@ public class PersistTermBean extends MB {
 
         return "/admin/gerTurmas.xhtml?faces-redirect=true";
 
+    }
+
+    public List<Teacher> getTeachers(){
+
+        return teacherService.listAll();
+
+    }
+
+    public List<Course> getCourses(){
+
+        return courseService.listAll();
 
     }
 
     public List<Pair<Course, Teacher>> getCourseList() {
         return courseList;
+    }
+
+    public void addCourse() {
+        courseList.add(new Pair<>(new Course(), new Teacher()));
     }
 
     public void setCourseList(List<Pair<Course, Teacher>> courseList) {
@@ -65,5 +89,22 @@ public class PersistTermBean extends MB {
     public void setTerm(Term term) {
         this.term = term;
     }
+
+    public ITeacherBo getTeacherService() {
+        return teacherService;
+    }
+
+    public void setTeacherService(ITeacherBo teacherService) {
+        this.teacherService = teacherService;
+    }
+
+    public ICourseBo getCourseService() {
+        return courseService;
+    }
+
+    public void setCourseService(ICourseBo courseService) {
+        this.courseService = courseService;
+    }
+
     //endregion
 }

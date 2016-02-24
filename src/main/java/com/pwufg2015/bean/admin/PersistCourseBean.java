@@ -31,7 +31,7 @@ public class PersistCourseBean extends MB {
 
         }
 
-        return "/admin/gerProfessores.xhtml?faces-redirect=true";
+        return "/admin/gerDisciplinas.xhtml?faces-redirect=true";
 
 
     }

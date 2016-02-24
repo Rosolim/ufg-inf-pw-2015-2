@@ -1,6 +1,7 @@
 package com.pwufg2015.bean;
 
 import org.primefaces.context.RequestContext;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -12,10 +13,11 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import java.io.IOException;
 
 @RequestScoped
 @ManagedBean(name = "authBean")
-public class AuthenticationBean {
+public class AuthenticationBean extends MB {
 
     private String userName = null;
     private String password = null;
@@ -43,6 +45,21 @@ public class AuthenticationBean {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Autenticado: ", "Logando..."));
 
         return "loginSuccess";
+
+    }
+
+    public void redirectIfLogged(){
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        if (!(auth instanceof AnonymousAuthenticationToken)) {
+            try {
+                getFacesContext().getExternalContext().redirect(
+                        getRequest().getContextPath() + "/dashboard.xhtml");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 

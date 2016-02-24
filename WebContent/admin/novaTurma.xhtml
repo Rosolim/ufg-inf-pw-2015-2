@@ -71,20 +71,47 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                        <div class="form-group">
-                                            <ui:repeat value="#{persistTermBean.courseList}" var="course">
-                                                <h:inputText value="#{course.at0}"/>
-                                            </ui:repeat>
-                                        </div>
+                                    <div class="row">
+                                        <h:commandButton style="float: left;" styleClass="btn btn-primary" value="Adicionar Disciplina">
+                                            <f:ajax listener="#{persistTermBean.addCourse}"
+                                                    process="@form"
+                                                    render="@form"/>
+                                        </h:commandButton>
                                     </div>
 
-                                    <h:commandButton
-                                            id="novaTurma" styleClass="btn btn-primary" value="Cadastrar Turma"
-                                            action="#{persistTermBean.persistNewTerm}"/>
+                                    <ui:repeat value="#{persistTermBean.courseList}" var="course">
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                            <div class="form-group">
+                                                <label for="dCourse">Disciplina: </label>
+                                                <h:selectOneMenu styleClass="form-control" id="dCourse"
+                                                                 value="#{course.value0}" converter="#{courseConverter}">
+                                                    <f:selectItems value="#{persistTermBean.courses}" var="c"
+                                                                   itemLabel="#{c.courseName}" itemValue="#{c}"/>
+                                                </h:selectOneMenu>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="dTeacher">Professor: </label>
+                                                <h:selectOneMenu styleClass="form-control" id="dTeacher"
+                                                                 value="#{course.value1}">
+                                                    <f:selectItems value="#{persistTermBean.teachers}" var="t"
+                                                                   itemLabel="#{t.name}" itemValue="#{t}"/>
+                                                </h:selectOneMenu>
+                                            </div>
+                                        </div>
+                                    </ui:repeat>
+
+                                    <div class="row">
+                                        <h:button outcome="/admin/gerTurmas.xhtml?faces-redirect=true"
+                                                  id="btnBack" type="button" styleClass="btn btn-primary" value="Voltar"/>
+                                        <h:commandButton
+                                                id="novaTurma" styleClass="btn btn-primary" value="Cadastrar Turma"
+                                                action="#{persistTermBean.persistNewTerm}"/>
+
+                                    </div>
+
                                 </h:form>
-                                <h:button outcome="/admin/gerTurmas.xhtml?faces-redirect=true"
-                                          id="btnBack" type="button" styleClass="btn btn-primary" value="Voltar"/>
+
 
                             </div>
                         </div>

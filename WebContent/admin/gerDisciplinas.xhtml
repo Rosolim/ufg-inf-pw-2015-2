@@ -36,12 +36,12 @@
                                                  styleClass="datatable table table-striped">
                                         <h:column>
                                             <f:facet name="header">Id</f:facet>
-                                            #{t.name}
+                                            #{t.courseId}
                                         </h:column>
 
                                         <h:column>
                                             <f:facet name="header">Disciplina</f:facet>
-                                            #{t.major}
+                                            #{t.courseName}
                                         </h:column>
 
                                         <h:column>
@@ -52,7 +52,7 @@
                                 </h:form>
                                 <button type="button" class="btn btn-primary">Voltar</button>
                                 <h:button outcome="/admin/novaDisciplina.xhtml?faces-redirect=true"
-                                          id="novaDisc" type="button" styleClass="btn btn-primary" value="Novo Funcionário"/>
+                                          id="novaDisc" type="button" styleClass="btn btn-primary" value="Nova Disciplina"/>
                             </div>
                         </div>
                     </div>
