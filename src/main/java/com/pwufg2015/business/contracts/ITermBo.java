@@ -1,9 +1,9 @@
 package com.pwufg2015.business.contracts;
 
+import com.pwufg2015.Utils.Pair;
 import com.pwufg2015.entities.Course;
 import com.pwufg2015.entities.Teacher;
 import com.pwufg2015.entities.Term;
-import org.javatuples.Pair;
 
 import java.util.List;
 

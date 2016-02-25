@@ -1,6 +1,7 @@
 package com.pwufg2015.bean.admin;
 
 
+import com.pwufg2015.Utils.Pair;
 import com.pwufg2015.bean.MB;
 import com.pwufg2015.business.contracts.ICourseBo;
 import com.pwufg2015.business.contracts.ITeacherBo;
@@ -8,12 +9,12 @@ import com.pwufg2015.business.contracts.ITermBo;
 import com.pwufg2015.entities.Course;
 import com.pwufg2015.entities.Teacher;
 import com.pwufg2015.entities.Term;
-import org.javatuples.Pair;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean(name = "persistTermBean")
 @ViewScoped

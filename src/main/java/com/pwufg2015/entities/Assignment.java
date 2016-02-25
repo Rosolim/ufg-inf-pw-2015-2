@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -69,5 +70,21 @@ public class Assignment implements Serializable {
 
     public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Assignment that = (Assignment) o;
+        return Objects.equals(assignmentId, that.assignmentId) &&
+                Objects.equals(type, that.type) &&
+                Objects.equals(createDate, that.createDate) &&
+                Objects.equals(dueDate, that.dueDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(assignmentId, type, createDate, dueDate);
     }
 }

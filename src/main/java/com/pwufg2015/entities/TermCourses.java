@@ -2,8 +2,7 @@ package com.pwufg2015.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Objects;
 
 @Entity
 @Table(name = "TermCourses")
@@ -75,5 +74,19 @@ public class TermCourses implements Serializable {
     }
     public void setTeacher(Teacher t){
     	this.teacher = t;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TermCourses)) return false;
+        TermCourses that = (TermCourses) o;
+        return Objects.equals(pk, that.pk) &&
+                Objects.equals(teacher, that.teacher);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(pk, teacher);
     }
 }

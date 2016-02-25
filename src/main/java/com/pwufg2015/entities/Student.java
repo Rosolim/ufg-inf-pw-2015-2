@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -47,5 +48,20 @@ public class Student extends Person implements Serializable {
 
 	public void setEndingDate(Date endingDate) {
 		this.endingDate = endingDate;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Student student = (Student) o;
+		return Objects.equals(status, student.status) &&
+				Objects.equals(admittanceDate, student.admittanceDate) &&
+				Objects.equals(endingDate, student.endingDate);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(status, admittanceDate, endingDate);
 	}
 }

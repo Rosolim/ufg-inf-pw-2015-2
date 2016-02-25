@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -69,5 +70,21 @@ public class Term implements Serializable {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Term)) return false;
+        Term term = (Term) o;
+        return Objects.equals(termId, term.termId) &&
+                Objects.equals(termName, term.termName) &&
+                Objects.equals(startDate, term.startDate) &&
+                Objects.equals(endDate, term.endDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(termId, termName, startDate, endDate);
     }
 }

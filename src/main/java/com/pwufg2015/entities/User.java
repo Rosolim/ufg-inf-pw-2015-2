@@ -2,6 +2,7 @@ package com.pwufg2015.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Table(name = "Users")
@@ -72,5 +73,22 @@ public class User implements Serializable {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user1 = (User) o;
+        return Objects.equals(userId, user1.userId) &&
+                Objects.equals(userName, user1.userName) &&
+                Objects.equals(password, user1.password) &&
+                Objects.equals(active, user1.active) &&
+                Objects.equals(user, user1.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, userName, password, active, user);
     }
 }

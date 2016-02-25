@@ -84,7 +84,7 @@
                                             <div class="form-group">
                                                 <label for="dCourse">Disciplina: </label>
                                                 <h:selectOneMenu styleClass="form-control" id="dCourse"
-                                                                 value="#{course.value0}" converter="#{courseConverter}">
+                                                                 value="#{course.x}" converter="#{courseConverter}">
                                                     <f:selectItems value="#{persistTermBean.courses}" var="c"
                                                                    itemLabel="#{c.courseName}" itemValue="#{c}"/>
                                                 </h:selectOneMenu>
@@ -93,7 +93,7 @@
                                             <div class="form-group">
                                                 <label for="dTeacher">Professor: </label>
                                                 <h:selectOneMenu styleClass="form-control" id="dTeacher"
-                                                                 value="#{course.value1}">
+                                                                 value="#{course.y}" converter="#{teacherConverter}">
                                                     <f:selectItems value="#{persistTermBean.teachers}" var="t"
                                                                    itemLabel="#{t.name}" itemValue="#{t}"/>
                                                 </h:selectOneMenu>
@@ -109,10 +109,7 @@
                                                 action="#{persistTermBean.persistNewTerm}"/>
 
                                     </div>
-
                                 </h:form>
-
-
                             </div>
                         </div>
                     </div>

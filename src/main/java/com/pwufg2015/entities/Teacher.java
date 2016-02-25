@@ -6,6 +6,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 @Table(name = "Teachers")
@@ -56,5 +57,22 @@ public class Teacher extends Person implements Serializable {
 
     public void setSalary(BigDecimal salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Teacher)) return false;
+        Teacher teacher = (Teacher) o;
+        return Objects.equals(active, teacher.active) &&
+                Objects.equals(admittanceDate, teacher.admittanceDate) &&
+                Objects.equals(endingDate, teacher.endingDate) &&
+                Objects.equals(major, teacher.major) &&
+                Objects.equals(salary, teacher.salary);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(active, admittanceDate, endingDate, major, salary);
     }
 }
