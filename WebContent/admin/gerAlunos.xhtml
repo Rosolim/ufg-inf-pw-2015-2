@@ -30,48 +30,62 @@
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="card">
 							<div class="card-body">
-								<h:form id="funcForm" prependId="false">
+								<h:form id="stdForm" prependId="false">
 									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-									<h:dataTable id="funcionariotable" value="#{listTeacherBean.model}" var="t"
+									<h:dataTable id="funcionariotable" value="#{listStudentBean.model}" var="s"
 												 styleClass="datatable table table-striped">
 										<h:column>
 											<f:facet name="header">Nome</f:facet>
-											#{t.name}
+											#{s.name}
 										</h:column>
 
 										<h:column>
-											<f:facet name="header">Habitação</f:facet>
-											#{t.major}
+											<f:facet name="header">Data de Nascimento</f:facet>
+											<h:outputText value="#{s.birthDate}" >
+												<f:convertDateTime pattern="dd.MM.yyyy" />
+											</h:outputText>
 										</h:column>
 
 										<h:column>
 											<f:facet name="header">Telefone</f:facet>
-											#{t.phoneNumber}
+											#{s.phoneNumber}
 										</h:column>
 
 										<h:column>
-											<f:facet name="header">Contratação</f:facet>
-											#{t.admittanceDate}
+											<f:facet name="header">E-Mail</f:facet>
+											#{s.email}
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Data de Matrícula</f:facet>
+											<h:outputText value="#{s.admittanceDate}" >
+												<f:convertDateTime pattern="dd.MM.yyyy" />
+											</h:outputText>
+										</h:column>
+
+										<h:column>
+											<f:facet name="header">Turma</f:facet>
+											#{s.termEnrolled.termName}
 										</h:column>
 
 										<h:column>
 											<f:facet name="header">Status</f:facet>
-											#{t.active}
+											#{s.status}
 										</h:column>
 
 										<h:column>
-											<h:commandButton value="Editar" action="#{listTeacherBean.editTeacher}" />
+											<h:commandButton value="Editar" action="#{listStudentBean.editStudent}" />
 										</h:column>
 
 										<h:column>
-											<h:commandButton value="Excluir" action="#{listTeacherBean.deleteTeacher}" />
+											<h:commandButton value="Excluir" action="#{listStudentBean.deleteStudent}" />
 										</h:column>
 
 									</h:dataTable>
 								</h:form>
 								<button type="button" class="btn btn-primary">Voltar</button>
-								<h:button outcome="/admin/novoProfessor.xhtml?faces-redirect=true"
-										  id="novoFunc" type="button" styleClass="btn btn-primary" value="Novo Funcionário"/>
+								<h:button outcome="/admin/novoAluno.xhtml?faces-redirect=true"
+										  id="novoStd" type="button" styleClass="btn btn-primary" value="Novo Aluno"/>
 							</div>
 						</div>
 					</div>

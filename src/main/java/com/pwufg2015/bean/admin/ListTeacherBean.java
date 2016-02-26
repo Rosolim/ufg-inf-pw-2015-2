@@ -42,7 +42,7 @@ public class ListTeacherBean extends MB {
 
         try {
 
-         teacherService.deleteObject(model.getRowData());
+         teacherService.deleteTeacher(model.getRowData());
          teachers.remove(model.getRowData());
 
         }catch (Exception ex){

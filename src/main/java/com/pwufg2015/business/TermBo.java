@@ -3,12 +3,10 @@ package com.pwufg2015.business;
 import com.pwufg2015.Utils.Pair;
 import com.pwufg2015.business.contracts.ITermBo;
 import com.pwufg2015.dao.contracts.TermDaoContract;
-import com.pwufg2015.entities.Course;
-import com.pwufg2015.entities.Teacher;
-import com.pwufg2015.entities.Term;
-import com.pwufg2015.entities.TermCourses;
+import com.pwufg2015.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
@@ -22,7 +20,6 @@ public class TermBo implements ITermBo {
     @Autowired
     TermDaoContract termDao;
 
-    @Override
     @Transactional(readOnly = false)
     public void newObject(Term term) {
         termDao.add(term);
@@ -30,7 +27,7 @@ public class TermBo implements ITermBo {
 
     @Override
     @Transactional(readOnly = false)
-    public void newObject(Term term, List<Pair<Course, Teacher>> courses) {
+    public void newTerm(Term term, List<Pair<Course, Teacher>> courses) {
 
         TermCourses termCourse;
         Set<TermCourses> termCourses = new HashSet<>(0);
@@ -56,19 +53,21 @@ public class TermBo implements ITermBo {
     }
 
     @Override
-    public Term retrieveObject(long id) {
+    public Term retrieveTermById(long id) {
+
         return termDao.get(id);
+
     }
 
-    @Override
     @Transactional(readOnly = false)
-    public void updateObject(Term term) {
+    @Override
+    public void updateTerm(Term term) {
         termDao.update(term);
     }
 
-    @Override
     @Transactional(readOnly = false)
-    public void deleteObject(Term term) {
+    @Override
+    public void deleteTerm(Term term) {
         termDao.delete(term);
     }
 

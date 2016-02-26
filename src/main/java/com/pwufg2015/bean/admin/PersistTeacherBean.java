@@ -25,7 +25,7 @@ public class PersistTeacherBean extends MB {
 
             teacher.setAdmittanceDate(new Date());
             teacher.setActive(true);
-            teacherService.newObject(teacher);
+            teacherService.newTeacher(teacher);
 
         }catch (Exception ex){
 

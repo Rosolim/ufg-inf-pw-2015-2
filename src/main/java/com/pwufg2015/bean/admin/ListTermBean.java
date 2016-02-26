@@ -46,7 +46,7 @@ public class ListTermBean extends MB {
 
         try {
 
-            termService.deleteObject(model.getRowData());
+            termService.deleteTerm(model.getRowData());
             terms.remove(model.getRowData());
 
         }catch (Exception ex){

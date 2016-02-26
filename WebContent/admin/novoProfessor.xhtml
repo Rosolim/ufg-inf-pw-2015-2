@@ -74,7 +74,7 @@
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                         <div class="form-group">
                                             <label for="cpf">CPF:</label>
-                                            <h:inputText id="cpf" value="#{persistTeacherBean.teacher.cpf}"
+                                            <p:inputMask id="cpf" value="#{persistTeacherBean.teacher.cpf}" mask="999.999.999-99"
                                                          styleClass="form-control"
                                                          pt:type="number"
                                                          required="true" requiredMessage="Digite o cpf"/>
@@ -84,12 +84,14 @@
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                         <div class="form-group">
                                             <label for="phone">Telefone:</label>
-                                            <h:inputText id="phone"
+                                            <p:inputMask id="phone" mask="(99)9999-9999"
                                                          value="#{persistTeacherBean.teacher.phoneNumber}"
                                                          styleClass="form-control"
                                                          pt:type="number"
                                                          required="true"
-                                                         requiredMessage="Digite o telefone"/>
+                                                         requiredMessage="Digite o telefone">
+                                                <f:validateLength minimum="10" maximum="10" />
+                                            </p:inputMask>
                                         </div>
                                     </div>
 
@@ -117,20 +119,20 @@
 
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                         <div class="form-group">
-                                            <label for="salary">Remuneração:</label>
+                                            <label for="salary">Salário:</label>
                                             <h:inputText id="salary"
                                                          value="#{persistTeacherBean.teacher.salary}"
                                                          styleClass="form-control"
                                                          pt:type="number"
-                                                         pt:pattern="^\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$"
                                                          required="true"
-                                                         requiredMessage="Digite o nome do funcionário"/>
+                                                         requiredMessage="Digite o salário do professor">
+                                             </h:inputText>
                                         </div>
                                     </div>
 
 
                                     <h:commandButton
-                                            id="novoFunc" styleClass="btn btn-primary" value="Cadastrar Funcionário"
+                                            id="novoFunc" styleClass="btn btn-primary" value="Cadastrar Professor"
                                             action="#{persistTeacherBean.persistNewTeacher}"/>
                                 </h:form>
                                 <h:button outcome="/admin/gerProfessores.xhtml?faces-redirect=true"

@@ -42,7 +42,7 @@ public class AuthenticationBean extends MB {
         }
 
         context.addCallbackParam("isValid", true);
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Autenticado: ", "Logando..."));
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Autenticado: ", "Logando..."));
 
         return "loginSuccess";
 
@@ -69,7 +69,7 @@ public class AuthenticationBean extends MB {
 
     public String logout(){
         SecurityContextHolder.clearContext();
-        return "loggedout";
+        return "/login.xhtml";
     }
 
     public AuthenticationManager getAuthenticationManager() {

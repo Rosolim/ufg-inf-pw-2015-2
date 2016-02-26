@@ -29,7 +29,6 @@ public class PersistTermBean extends MB {
     @ManagedProperty(name = "courseService", value = "#{CourseService}")
     private ICourseBo courseService;
 
-
     private Term term = new Term();
     private List<Pair<Course,Teacher>> courseList = new ArrayList<>();
 
@@ -37,7 +36,7 @@ public class PersistTermBean extends MB {
 
         try {
 
-            termService.newObject(term,courseList);
+            termService.newTerm(term, courseList);
 
         }catch (Exception ex){
 

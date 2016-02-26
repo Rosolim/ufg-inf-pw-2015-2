@@ -15,26 +15,6 @@ public class AssignmentBo implements IAssignmentBo {
 	AssignmentDaoContract assignment;
 
 	@Override
-	public void newObject(Assignment assignment) {
-
-	}
-
-	@Override
-	public Assignment retrieveObject(long id) {
-		return null;
-	}
-
-	@Override
-	public void updateObject(Assignment assignment) {
-
-	}
-
-	@Override
-	public void deleteObject(Assignment assignment) {
-
-	}
-
-	@Override
 	public List<Assignment> listAll() {
 		return null;
 	}

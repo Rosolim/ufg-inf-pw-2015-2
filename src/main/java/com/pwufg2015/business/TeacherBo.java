@@ -18,24 +18,24 @@ public class TeacherBo implements ITeacherBo {
 
     @Override
     @Transactional(readOnly = false)
-    public void newObject(Teacher teacher) {
+    public void newTeacher(Teacher teacher) {
         teacherDao.add(teacher);
     }
 
     @Override
-    public Teacher retrieveObject(long id) {
+    public Teacher retrieveTeacherById(long id) {
         return teacherDao.get(id);
     }
 
     @Override
     @Transactional(readOnly = false)
-    public void updateObject(Teacher teacher) {
+    public void updateTeacher(Teacher teacher) {
         teacherDao.update(teacher);
     }
 
     @Override
     @Transactional(readOnly = false)
-    public void deleteObject(Teacher teacher) {
+    public void deleteTeacher(Teacher teacher) {
         teacherDao.delete(teacher);
     }
 

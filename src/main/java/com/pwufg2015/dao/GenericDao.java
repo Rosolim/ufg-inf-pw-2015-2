@@ -36,6 +36,7 @@ public abstract class GenericDao<Entity extends Serializable> implements Generic
     }
 
     @Override
+    @Transactional(readOnly = false)
     public void update(Entity entity) {
         dbSession().update(entity);
     }

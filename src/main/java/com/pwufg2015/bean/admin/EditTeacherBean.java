@@ -28,7 +28,7 @@ public class EditTeacherBean extends MB {
     public String editTeacher(){
 
         try{
-            teacherService.updateObject(teacher);
+            teacherService.updateTeacher(teacher);
         }catch (Exception ex){
             ex.printStackTrace();
             return "";

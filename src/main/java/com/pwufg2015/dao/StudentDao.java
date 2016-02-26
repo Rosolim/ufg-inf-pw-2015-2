@@ -12,4 +12,9 @@ public class StudentDao extends GenericDao<Student> implements StudentDaoContrac
         super(Student.class);
     }
 
+    @Override
+    public void delete(Student student) {
+        student.setTermEnrolled(null);
+        super.delete(student);
+    }
 }

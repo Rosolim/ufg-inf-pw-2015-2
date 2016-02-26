@@ -31,7 +31,7 @@ public class Term implements Serializable {
         return termCourses;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "termEnrolled", cascade = CascadeType.ALL)
     public Set<Student> getTermStudents() {
         return termStudents;
     }

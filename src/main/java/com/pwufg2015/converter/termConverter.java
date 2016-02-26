@@ -1,7 +1,7 @@
 package com.pwufg2015.converter;
 
-import com.pwufg2015.business.contracts.ITeacherBo;
-import com.pwufg2015.entities.Teacher;
+import com.pwufg2015.business.contracts.ITermBo;
+import com.pwufg2015.entities.Term;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -12,17 +12,17 @@ import javax.faces.convert.Converter;
 
 @ManagedBean
 @RequestScoped
-public class teacherConverter implements Converter {
+public class termConverter implements Converter {
 
-    @ManagedProperty(name = "teacherService", value = "#{TeacherService}")
-    private ITeacherBo teacherService;
+    @ManagedProperty(name = "termService", value = "#{TermService}")
+    private ITermBo termService;
 
 
     @Override
     public Object getAsObject(FacesContext facesContext, UIComponent uiComponent, String s) {
 
         if (s != null && !s.equals("")) {
-            return teacherService.retrieveTeacherById(Long.valueOf(s));
+            return termService.retrieveTermById(Long.valueOf(s));
         }
 
         return null;
@@ -31,20 +31,20 @@ public class teacherConverter implements Converter {
     @Override
     public String getAsString(FacesContext facesContext, UIComponent uiComponent, Object o) {
 
-        if (o instanceof Teacher) {
-            Teacher teacher = (Teacher) o;
-            return String.valueOf(teacher.getPersonId());
+        if (o instanceof Term) {
+            Term term = (Term) o;
+            return String.valueOf(term.getTermId());
         }
 
         return "";
     }
 
-    public ITeacherBo getTeacherService() {
-        return teacherService;
+    public ITermBo getTermService() {
+        return termService;
     }
 
-    public void setTeacherService(ITeacherBo teacherService) {
-        this.teacherService = teacherService;
+    public void setTermService(ITermBo termService) {
+        this.termService = termService;
     }
 
 }

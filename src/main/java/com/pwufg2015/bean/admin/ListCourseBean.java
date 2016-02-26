@@ -42,7 +42,7 @@ public class ListCourseBean extends MB {
 
         try {
 
-            courseService.deleteObject(model.getRowData());
+            courseService.deleteCourse(model.getRowData());
             courses.remove(model.getRowData());
 
         }catch (Exception ex){

@@ -40,17 +40,21 @@
 
                                         <h:column>
                                             <f:facet name="header">Data de Início</f:facet>
-                                            #{t.startDate}
+                                            <h:outputText value="#{t.startDate}" >
+                                                <f:convertDateTime pattern="dd.MM.yyyy" />
+                                            </h:outputText>
                                         </h:column>
 
                                         <h:column>
-                                            <f:facet name="header">Data Final</f:facet>
-                                            #{t.endDate}
+                                            <f:facet name="header">Data de Fim</f:facet>
+                                            <h:outputText value="#{t.endDate}" >
+                                                <f:convertDateTime pattern="dd.MM.yyyy" />
+                                            </h:outputText>
                                         </h:column>
 
                                         <h:column>
                                             <f:facet name="header">Qtd. Alunos</f:facet>
-
+                                            #{t.termStudents.size()}
                                         </h:column>
 
                                         <h:column>

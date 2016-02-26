@@ -22,7 +22,7 @@ public class PersistCourseBean extends MB {
 
         try {
 
-            courseService.newObject(course);
+            courseService.newCourse(course);
 
         }catch (Exception ex){
 

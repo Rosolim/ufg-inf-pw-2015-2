@@ -15,22 +15,22 @@ public class UserBo implements IUserBo {
     UserDaoContract userDao;
 
     @Override
-    public void newObject(User user) {
+    public void newUser(User user) {
 
     }
 
     @Override
-    public User retrieveObject(long id) {
+    public User getUserById(long id) {
         return null;
     }
 
     @Override
-    public void updateObject(User user) {
+    public void updateUser(User user) {
 
     }
 
     @Override
-    public void deleteObject(User user) {
+    public void deleteUser(User user) {
 
     }
 

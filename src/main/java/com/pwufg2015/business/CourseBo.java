@@ -19,18 +19,18 @@ public class CourseBo implements ICourseBo {
 
 	@Override
 	@Transactional(readOnly = false)
-	public void newObject(Course course) {
+	public void newCourse(Course course) {
           courseDao.add(course);
 	}
 
 	@Override
-	public Course retrieveObject(long id) {
+	public Course retrieveCourseById(long id) {
 		return courseDao.get(id);
 	}
 
 	@Override
 	@Transactional(readOnly = false)
-	public void updateObject(Course course) {
+	public void updateCourse(Course course) {
 
 		courseDao.update(course);
 
@@ -38,7 +38,7 @@ public class CourseBo implements ICourseBo {
 
 	@Override
 	@Transactional(readOnly = false)
-	public void deleteObject(Course course) {
+	public void deleteCourse(Course course) {
 
 		courseDao.delete(course);
 

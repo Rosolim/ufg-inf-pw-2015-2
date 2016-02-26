@@ -67,7 +67,8 @@
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                         <div class="form-group">
                                             <label for="cpf">CPF:</label>
-                                            <h:inputText id="cpf" value="#{editTeacherBean.teacher.cpf}"
+                                            <p:inputMask id="cpf" value="#{editTeacherBean.teacher.cpf}"
+                                                         mask="999.999.999-99"
                                                          styleClass="form-control"
                                                          pt:type="number"
                                                          readonly="true" requiredMessage="Digite o cpf"/>
@@ -77,7 +78,8 @@
                                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                         <div class="form-group">
                                             <label for="phone">Telefone:</label>
-                                            <h:inputText id="phone"
+                                            <p:inputMask id="phone"
+                                                         mask="(99)9999-9999"
                                                          value="#{editTeacherBean.teacher.phoneNumber}"
                                                          styleClass="form-control"
                                                          pt:type="number"
